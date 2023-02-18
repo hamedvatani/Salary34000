@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Salary34000.Data;
 
@@ -10,44 +11,14 @@ using Salary34000.Data;
 namespace Salary34000.Migrations
 {
     [DbContext(typeof(SalaryContext))]
-    partial class SalaryContextModelSnapshot : ModelSnapshot
+    [Migration("20230217231358_General")]
+    partial class General
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.3");
-
-            modelBuilder.Entity("Salary34000.Models.EmploymentType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmploymentTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "رسمی"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "قرارداد پاره‌وقت"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "قرارداد تمام‌وقت"
-                        });
-                });
 
             modelBuilder.Entity("Salary34000.Models.Person", b =>
                 {
@@ -80,12 +51,6 @@ namespace Salary34000.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("EmploymentDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("EmploymentTypeId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -107,20 +72,7 @@ namespace Salary34000.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EmploymentTypeId");
-
                     b.ToTable("Persons");
-                });
-
-            modelBuilder.Entity("Salary34000.Models.Person", b =>
-                {
-                    b.HasOne("Salary34000.Models.EmploymentType", "EmploymentType")
-                        .WithMany()
-                        .HasForeignKey("EmploymentTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("EmploymentType");
                 });
 #pragma warning restore 612, 618
         }

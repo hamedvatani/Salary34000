@@ -1,11 +1,72 @@
-﻿namespace Salary34000.Models;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
+using System.Runtime.CompilerServices;
+using Salary34000.Annotations;
 
-public class Person : BaseModel
+namespace Salary34000.Models;
+
+public class Person : BaseModel, INotifyPropertyChanged
 {
+    #region INotifyPropertyChanged Members
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    [NotifyPropertyChangedInvocator]
+    protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    #endregion
+
+    #region Formula Properties
+
+    [NotMapped] public int BirthYear => new PersianCalendar().GetYear(BirthDate);
+
+    [NotMapped]
+    public int Age => new PersianCalendar().GetYear(DateTime.Today) - new PersianCalendar().GetYear(BirthDate);
+
+    #endregion
+
+    #region Private Members
+
+    private DateTime _birthDate;
+
+    #endregion
+
+    #region Public Members
+
     public string PersonelCode { get; set; } = "";
     public string FirstName { get; set; } = "";
     public string LastName { get; set; } = "";
     public string NationalCode { get; set; } = "";
     public string DocumentNumber { get; set; } = "";
     public string DocumentSerial { get; set; } = "";
+    public GenderEnum Gender { get; set; }
+    public int ChildrenCount { get; set; }
+    public DateTime DocumentDate { get; set; }
+    public string DocumentCity { get; set; } = "";
+
+    public DateTime BirthDate
+    {
+        get => _birthDate;
+        set
+        {
+            _birthDate = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public string BirthCity { get; set; } = "";
+    public DateTime EmploymentDate { get; set; }
+    [ForeignKey(nameof(EmploymentType))] public int EmploymentTypeId { get; set; }
+
+    #endregion
+
+    #region Virtual Members
+
+    public virtual EmploymentType EmploymentType { get; set; } = null!;
+
+    #endregion
 }
