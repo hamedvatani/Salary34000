@@ -59,8 +59,17 @@
             this.txtPersonelCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtConsolidatedInsurance = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtOrganizationPost = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cmbOrganizationUnit = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cmbEmploymentType = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.dtpEmploymentDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -69,14 +78,21 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.cmbEmploymentType = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDocumentDate)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentDate)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -86,6 +102,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
@@ -372,18 +389,16 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtConsolidatedInsurance);
+            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.txtOrganizationPost);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.cmbOrganizationUnit);
+            this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.cmbEmploymentType);
             this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.dtpEmploymentDate);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -391,6 +406,74 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "مشخصات شغلی";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtConsolidatedInsurance
+            // 
+            this.txtConsolidatedInsurance.Location = new System.Drawing.Point(407, 129);
+            this.txtConsolidatedInsurance.Name = "txtConsolidatedInsurance";
+            this.txtConsolidatedInsurance.Size = new System.Drawing.Size(123, 22);
+            this.txtConsolidatedInsurance.TabIndex = 30;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(536, 132);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(113, 14);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "سوابق تلفیقی بیمه :";
+            // 
+            // txtOrganizationPost
+            // 
+            this.txtOrganizationPost.Location = new System.Drawing.Point(407, 101);
+            this.txtOrganizationPost.Name = "txtOrganizationPost";
+            this.txtOrganizationPost.Size = new System.Drawing.Size(123, 22);
+            this.txtOrganizationPost.TabIndex = 28;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(536, 104);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 14);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "پست سازمانی :";
+            // 
+            // cmbOrganizationUnit
+            // 
+            this.cmbOrganizationUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOrganizationUnit.FormattingEnabled = true;
+            this.cmbOrganizationUnit.Location = new System.Drawing.Point(407, 73);
+            this.cmbOrganizationUnit.Name = "cmbOrganizationUnit";
+            this.cmbOrganizationUnit.Size = new System.Drawing.Size(123, 22);
+            this.cmbOrganizationUnit.TabIndex = 26;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(536, 76);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(74, 14);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "محل خدمت :";
+            // 
+            // cmbEmploymentType
+            // 
+            this.cmbEmploymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmploymentType.FormattingEnabled = true;
+            this.cmbEmploymentType.Location = new System.Drawing.Point(407, 45);
+            this.cmbEmploymentType.Name = "cmbEmploymentType";
+            this.cmbEmploymentType.Size = new System.Drawing.Size(123, 22);
+            this.cmbEmploymentType.TabIndex = 24;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(536, 48);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(78, 14);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "نوع استخدام :";
             // 
             // dtpEmploymentDate
             // 
@@ -413,12 +496,38 @@
             this.label19.TabIndex = 21;
             this.label19.Text = "تاریخ استخدام :";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.label25);
+            this.tabPage3.Controls.Add(this.textBox7);
+            this.tabPage3.Controls.Add(this.label26);
+            this.tabPage3.Controls.Add(this.textBox8);
+            this.tabPage3.Controls.Add(this.label27);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(689, 338);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "مشخصات تحصیلی";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(157, 101);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(123, 22);
-            this.textBox1.TabIndex = 15;
+            this.textBox1.TabIndex = 23;
             // 
             // label15
             // 
@@ -426,7 +535,7 @@
             this.label15.Location = new System.Drawing.Point(286, 104);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 14);
-            this.label15.TabIndex = 14;
+            this.label15.TabIndex = 22;
             this.label15.Text = "کد ملی :";
             // 
             // textBox2
@@ -434,7 +543,7 @@
             this.textBox2.Location = new System.Drawing.Point(157, 73);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(123, 22);
-            this.textBox2.TabIndex = 13;
+            this.textBox2.TabIndex = 21;
             // 
             // label16
             // 
@@ -442,7 +551,7 @@
             this.label16.Location = new System.Drawing.Point(286, 76);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(80, 14);
-            this.label16.TabIndex = 12;
+            this.label16.TabIndex = 20;
             this.label16.Text = "نام خانوادگی :";
             // 
             // textBox3
@@ -450,7 +559,7 @@
             this.textBox3.Location = new System.Drawing.Point(157, 45);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(123, 22);
-            this.textBox3.TabIndex = 11;
+            this.textBox3.TabIndex = 19;
             // 
             // label17
             // 
@@ -458,7 +567,7 @@
             this.label17.Location = new System.Drawing.Point(286, 48);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 14);
-            this.label17.TabIndex = 10;
+            this.label17.TabIndex = 18;
             this.label17.Text = "نام :";
             // 
             // textBox4
@@ -466,7 +575,7 @@
             this.textBox4.Location = new System.Drawing.Point(157, 17);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(123, 22);
-            this.textBox4.TabIndex = 9;
+            this.textBox4.TabIndex = 17;
             // 
             // label18
             // 
@@ -474,26 +583,72 @@
             this.label18.Location = new System.Drawing.Point(286, 20);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 14);
-            this.label18.TabIndex = 8;
+            this.label18.TabIndex = 16;
             this.label18.Text = "کد پرسنلی :";
             // 
-            // cmbEmploymentType
+            // textBox5
             // 
-            this.cmbEmploymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmploymentType.FormattingEnabled = true;
-            this.cmbEmploymentType.Location = new System.Drawing.Point(407, 45);
-            this.cmbEmploymentType.Name = "cmbEmploymentType";
-            this.cmbEmploymentType.Size = new System.Drawing.Size(123, 22);
-            this.cmbEmploymentType.TabIndex = 24;
+            this.textBox5.Location = new System.Drawing.Point(439, 17);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(123, 22);
+            this.textBox5.TabIndex = 31;
             // 
-            // label20
+            // label24
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(536, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 14);
-            this.label20.TabIndex = 23;
-            this.label20.Text = "نوع استخدام :";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(568, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 14);
+            this.label24.TabIndex = 30;
+            this.label24.Text = "کد ملی :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(157, 185);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(123, 22);
+            this.textBox6.TabIndex = 29;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(286, 188);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(80, 14);
+            this.label25.TabIndex = 28;
+            this.label25.Text = "نام خانوادگی :";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(157, 157);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(123, 22);
+            this.textBox7.TabIndex = 27;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(286, 160);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 14);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "نام :";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(157, 129);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(123, 22);
+            this.textBox8.TabIndex = 25;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(286, 132);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(72, 14);
+            this.label27.TabIndex = 24;
+            this.label27.Text = "کد پرسنلی :";
             // 
             // frmPerson
             // 
@@ -514,6 +669,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentDate)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -553,6 +710,23 @@
         private Label label14;
         private Telerik.WinControls.UI.RadDateTimePicker dtpEmploymentDate;
         private Label label19;
+        private ComboBox cmbEmploymentType;
+        private Label label20;
+        private ComboBox cmbOrganizationUnit;
+        private Label label21;
+        private TextBox txtOrganizationPost;
+        private Label label22;
+        private TextBox txtConsolidatedInsurance;
+        private Label label23;
+        private TabPage tabPage3;
+        private TextBox textBox5;
+        private Label label24;
+        private TextBox textBox6;
+        private Label label25;
+        private TextBox textBox7;
+        private Label label26;
+        private TextBox textBox8;
+        private Label label27;
         private TextBox textBox1;
         private Label label15;
         private TextBox textBox2;
@@ -561,7 +735,5 @@
         private Label label17;
         private TextBox textBox4;
         private Label label18;
-        private ComboBox cmbEmploymentType;
-        private Label label20;
     }
 }

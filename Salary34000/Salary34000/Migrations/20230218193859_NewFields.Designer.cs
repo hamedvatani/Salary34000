@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Salary34000.Data;
 
@@ -10,9 +11,11 @@ using Salary34000.Data;
 namespace Salary34000.Migrations
 {
     [DbContext(typeof(SalaryContext))]
-    partial class SalaryContextModelSnapshot : ModelSnapshot
+    [Migration("20230218193859_NewFields")]
+    partial class NewFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.3");

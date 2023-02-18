@@ -36,7 +36,10 @@ namespace Salary34000
                     BirthDate = new DateTime(1977, 3, 22),
                     BirthCity = "تهران",
                     EmploymentDate = new PersianCalendar().ToDateTime(1382, 1, 1, 0, 0, 0, 0),
-                    EmploymentTypeId = 3
+                    EmploymentTypeId = 3,
+                    OrganizationUnitId = 9,
+                    OrganizationPost = "سرپرست توسعه فنی",
+                    ConsolidatedInsurance = 16.25
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();

@@ -54,6 +54,9 @@ namespace Salary34000.Forms
             BindTextbox(txtAge);
             BindDateTimePicker(dtpEmploymentDate);
             BindCombobox(cmbEmploymentType, "Id");
+            BindCombobox(cmbOrganizationUnit, "Id");
+            BindTextbox(txtOrganizationPost);
+            BindTextbox(txtConsolidatedInsurance);
         }
 
         private void BindTextbox(TextBox textBox)
@@ -80,6 +83,10 @@ namespace Salary34000.Forms
             cmbEmploymentType.DataSource = _context.EmploymentTypes.ToArray();
             cmbEmploymentType.DisplayMember = "Description";
             cmbEmploymentType.ValueMember = "Id";
+
+            cmbOrganizationUnit.DataSource = _context.OrganizationUnits.ToArray();
+            cmbOrganizationUnit.DisplayMember = "Description";
+            cmbOrganizationUnit.ValueMember = "Id";
         }
 
         private void LoadForm()

@@ -61,12 +61,16 @@ public class Person : BaseModel, INotifyPropertyChanged
     public string BirthCity { get; set; } = "";
     public DateTime EmploymentDate { get; set; }
     [ForeignKey(nameof(EmploymentType))] public int EmploymentTypeId { get; set; }
+    [ForeignKey(nameof(OrganizationUnit))] public int OrganizationUnitId { get; set; }
+    public string OrganizationPost { get; set; } = "";
+    public double ConsolidatedInsurance { get; set; }
 
     #endregion
 
     #region Virtual Members
 
     public virtual EmploymentType EmploymentType { get; set; } = null!;
+    public virtual OrganizationUnit OrganizationUnit { get; set; } = null!;
 
     #endregion
 }
