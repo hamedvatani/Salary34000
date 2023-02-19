@@ -8,6 +8,7 @@ public class SalaryContext : DbContext
     public DbSet<Person> Persons { get; set; } = null!;
     public DbSet<EmploymentType> EmploymentTypes { get; set; } = null!;
     public DbSet<OrganizationUnit> OrganizationUnits { get; set; } = null!;
+    public DbSet<Education> Educations { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -138,6 +139,44 @@ public class SalaryContext : DbContext
             {
                 Id = 21,
                 Description = "مدیریت تدارکات"
+            }
+        );
+        modelBuilder.Entity<Education>().HasData(
+            new Education
+            {
+                Id = 1,
+                Description = "زیر دیپلم",
+                Score = 2
+            },
+            new Education
+            {
+                Id = 2,
+                Description = "دیپلم",
+                Score = 4
+            },
+            new Education
+            {
+                Id = 3,
+                Description = "فوق دیپلم",
+                Score = 6
+            },
+            new Education
+            {
+                Id = 4,
+                Description = "کارشناسی",
+                Score = 8
+            },
+            new Education
+            {
+                Id = 5,
+                Description = "کارشناسی ارشد",
+                Score = 10
+            },
+            new Education
+            {
+                Id = 6,
+                Description = "دکتری",
+                Score = 10
             }
         );
     }

@@ -39,7 +39,10 @@ namespace Salary34000
                     EmploymentTypeId = 3,
                     OrganizationUnitId = 9,
                     OrganizationPost = "سرپرست توسعه فنی",
-                    ConsolidatedInsurance = 16.25
+                    ConsolidatedInsurance = 16.25,
+                    EducationId = 5,
+                    EducationField = "مهندسی کامپیوتر - معماری کامپیوتر",
+                    EducationPlace = "دانشگاه تهران"
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();

@@ -70,21 +70,13 @@
             this.dtpEmploymentDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cmbEducation = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtEducationAverage = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEducationPlace = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtEducationField = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -498,22 +490,14 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.cmbEducation);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.txtEducationAverage);
             this.tabPage3.Controls.Add(this.label25);
-            this.tabPage3.Controls.Add(this.textBox7);
+            this.tabPage3.Controls.Add(this.txtEducationPlace);
             this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Controls.Add(this.textBox8);
+            this.tabPage3.Controls.Add(this.txtEducationField);
             this.tabPage3.Controls.Add(this.label27);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -522,133 +506,71 @@
             this.tabPage3.Text = "مشخصات تحصیلی";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // cmbEducation
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 22);
-            this.textBox1.TabIndex = 23;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(286, 104);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 14);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "کد ملی :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(157, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 22);
-            this.textBox2.TabIndex = 21;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(286, 76);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 14);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "نام خانوادگی :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(157, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(123, 22);
-            this.textBox3.TabIndex = 19;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(286, 48);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(29, 14);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "نام :";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(157, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(123, 22);
-            this.textBox4.TabIndex = 17;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(286, 20);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 14);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "کد پرسنلی :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(439, 17);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(123, 22);
-            this.textBox5.TabIndex = 31;
+            this.cmbEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEducation.FormattingEnabled = true;
+            this.cmbEducation.Location = new System.Drawing.Point(439, 17);
+            this.cmbEducation.Name = "cmbEducation";
+            this.cmbEducation.Size = new System.Drawing.Size(123, 22);
+            this.cmbEducation.TabIndex = 32;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(568, 20);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(54, 14);
+            this.label24.Size = new System.Drawing.Size(58, 14);
             this.label24.TabIndex = 30;
-            this.label24.Text = "کد ملی :";
+            this.label24.Text = "تحصیلات :";
             // 
-            // textBox6
+            // txtEducationAverage
             // 
-            this.textBox6.Location = new System.Drawing.Point(157, 185);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(123, 22);
-            this.textBox6.TabIndex = 29;
+            this.txtEducationAverage.Location = new System.Drawing.Point(439, 101);
+            this.txtEducationAverage.Name = "txtEducationAverage";
+            this.txtEducationAverage.Size = new System.Drawing.Size(123, 22);
+            this.txtEducationAverage.TabIndex = 29;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(286, 188);
+            this.label25.Location = new System.Drawing.Point(568, 104);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(80, 14);
+            this.label25.Size = new System.Drawing.Size(42, 14);
             this.label25.TabIndex = 28;
-            this.label25.Text = "نام خانوادگی :";
+            this.label25.Text = "معدل :";
             // 
-            // textBox7
+            // txtEducationPlace
             // 
-            this.textBox7.Location = new System.Drawing.Point(157, 157);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(123, 22);
-            this.textBox7.TabIndex = 27;
+            this.txtEducationPlace.Location = new System.Drawing.Point(439, 73);
+            this.txtEducationPlace.Name = "txtEducationPlace";
+            this.txtEducationPlace.Size = new System.Drawing.Size(123, 22);
+            this.txtEducationPlace.TabIndex = 27;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(286, 160);
+            this.label26.Location = new System.Drawing.Point(568, 76);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(29, 14);
+            this.label26.Size = new System.Drawing.Size(75, 14);
             this.label26.TabIndex = 26;
-            this.label26.Text = "نام :";
+            this.label26.Text = "محل تحصیل :";
             // 
-            // textBox8
+            // txtEducationField
             // 
-            this.textBox8.Location = new System.Drawing.Point(157, 129);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(123, 22);
-            this.textBox8.TabIndex = 25;
+            this.txtEducationField.Location = new System.Drawing.Point(439, 45);
+            this.txtEducationField.Name = "txtEducationField";
+            this.txtEducationField.Size = new System.Drawing.Size(123, 22);
+            this.txtEducationField.TabIndex = 25;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(286, 132);
+            this.label27.Location = new System.Drawing.Point(568, 48);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(72, 14);
+            this.label27.Size = new System.Drawing.Size(86, 14);
             this.label27.TabIndex = 24;
-            this.label27.Text = "کد پرسنلی :";
+            this.label27.Text = "رشته تحصیلی :";
             // 
             // frmPerson
             // 
@@ -719,21 +641,13 @@
         private TextBox txtConsolidatedInsurance;
         private Label label23;
         private TabPage tabPage3;
-        private TextBox textBox5;
         private Label label24;
-        private TextBox textBox6;
+        private TextBox txtEducationAverage;
         private Label label25;
-        private TextBox textBox7;
+        private TextBox txtEducationPlace;
         private Label label26;
-        private TextBox textBox8;
+        private TextBox txtEducationField;
         private Label label27;
-        private TextBox textBox1;
-        private Label label15;
-        private TextBox textBox2;
-        private Label label16;
-        private TextBox textBox3;
-        private Label label17;
-        private TextBox textBox4;
-        private Label label18;
+        private ComboBox cmbEducation;
     }
 }

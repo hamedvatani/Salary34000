@@ -57,6 +57,10 @@ namespace Salary34000.Forms
             BindCombobox(cmbOrganizationUnit, "Id");
             BindTextbox(txtOrganizationPost);
             BindTextbox(txtConsolidatedInsurance);
+            BindCombobox(cmbEducation, "Id");
+            BindTextbox(txtEducationField);
+            BindTextbox(txtEducationPlace);
+            BindTextbox(txtEducationAverage);
         }
 
         private void BindTextbox(TextBox textBox)
@@ -87,6 +91,10 @@ namespace Salary34000.Forms
             cmbOrganizationUnit.DataSource = _context.OrganizationUnits.ToArray();
             cmbOrganizationUnit.DisplayMember = "Description";
             cmbOrganizationUnit.ValueMember = "Id";
+
+            cmbEducation.DataSource = _context.Educations.ToArray();
+            cmbEducation.DisplayMember = "Description";
+            cmbEducation.ValueMember = "Id";
         }
 
         private void LoadForm()
