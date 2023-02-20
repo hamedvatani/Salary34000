@@ -9,6 +9,7 @@ public class SalaryContext : DbContext
     public DbSet<EmploymentType> EmploymentTypes { get; set; } = null!;
     public DbSet<OrganizationUnit> OrganizationUnits { get; set; } = null!;
     public DbSet<Education> Educations { get; set; } = null!;
+    public DbSet<MilitaryService> MilitaryServices { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -177,6 +178,58 @@ public class SalaryContext : DbContext
                 Id = 6,
                 Description = "دکتری",
                 Score = 10
+            }
+        );
+        modelBuilder.Entity<MilitaryService>().HasData(
+            new MilitaryService
+            {
+                Id = 1,
+                Description = "پروژه نخبه وظیفه"
+            },
+            new MilitaryService
+            {
+                Id = 2,
+                Description = "در حال انجام"
+            },
+            new MilitaryService
+            {
+                Id = 3,
+                Description = "کارت پایان خدمت"
+            },
+            new MilitaryService
+            {
+                Id = 4,
+                Description = "کارت معافیت "
+            },
+            new MilitaryService
+            {
+                Id = 5,
+                Description = "معافیت پزشکی"
+            },
+            new MilitaryService
+            {
+                Id = 6,
+                Description = "معافیت تحصیلی"
+            },
+            new MilitaryService
+            {
+                Id = 7,
+                Description = "معافیت دائم"
+            },
+            new MilitaryService
+            {
+                Id = 8,
+                Description = "معافیت زیر پرچم"
+            },
+            new MilitaryService
+            {
+                Id = 9,
+                Description = "معافیت کفالت"
+            },
+            new MilitaryService
+            {
+                Id = 10,
+                Description = "معافیت موارد خاص"
             }
         );
     }

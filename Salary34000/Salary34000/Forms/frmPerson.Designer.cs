@@ -78,6 +78,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtEducationField = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.cmbMilitaryService = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBirthDate)).BeginInit();
@@ -105,6 +107,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmbMilitaryService);
+            this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.txtAge);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.txtBirthYear);
@@ -572,6 +576,24 @@
             this.label27.TabIndex = 24;
             this.label27.Text = "رشته تحصیلی :";
             // 
+            // cmbMilitaryService
+            // 
+            this.cmbMilitaryService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMilitaryService.FormattingEnabled = true;
+            this.cmbMilitaryService.Location = new System.Drawing.Point(144, 156);
+            this.cmbMilitaryService.Name = "cmbMilitaryService";
+            this.cmbMilitaryService.Size = new System.Drawing.Size(123, 22);
+            this.cmbMilitaryService.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(273, 159);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 14);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "وضعیت نظام وظیفه :";
+            // 
             // frmPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -649,5 +671,7 @@
         private TextBox txtEducationField;
         private Label label27;
         private ComboBox cmbEducation;
+        private ComboBox cmbMilitaryService;
+        private Label label15;
     }
 }

@@ -42,7 +42,8 @@ namespace Salary34000
                     ConsolidatedInsurance = 16.25,
                     EducationId = 5,
                     EducationField = "مهندسی کامپیوتر - معماری کامپیوتر",
-                    EducationPlace = "دانشگاه تهران"
+                    EducationPlace = "دانشگاه تهران",
+                    MilitaryServiceId = 5
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();

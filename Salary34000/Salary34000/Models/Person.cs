@@ -68,6 +68,7 @@ public class Person : BaseModel, INotifyPropertyChanged
     public string EducationField { get; set; } = "";
     public string EducationPlace { get; set; } = "";
     public double EducationAverage { get; set; }
+    [ForeignKey(nameof(MilitaryService))] public int MilitaryServiceId { get; set; }
 
     #endregion
 
@@ -76,6 +77,7 @@ public class Person : BaseModel, INotifyPropertyChanged
     public virtual EmploymentType EmploymentType { get; set; } = null!;
     public virtual OrganizationUnit OrganizationUnit { get; set; } = null!;
     public virtual Education Education { get; set; } = null!;
+    public virtual MilitaryService MilitaryService { get; set; } = null!;
 
     #endregion
 }

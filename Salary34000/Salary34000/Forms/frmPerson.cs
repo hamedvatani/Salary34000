@@ -61,6 +61,7 @@ namespace Salary34000.Forms
             BindTextbox(txtEducationField);
             BindTextbox(txtEducationPlace);
             BindTextbox(txtEducationAverage);
+            BindCombobox(cmbMilitaryService, "Id");
         }
 
         private void BindTextbox(TextBox textBox)
@@ -95,6 +96,10 @@ namespace Salary34000.Forms
             cmbEducation.DataSource = _context.Educations.ToArray();
             cmbEducation.DisplayMember = "Description";
             cmbEducation.ValueMember = "Id";
+
+            cmbMilitaryService.DataSource = _context.MilitaryServices.ToArray();
+            cmbMilitaryService.DisplayMember = "Description";
+            cmbMilitaryService.ValueMember = "Id";
         }
 
         private void LoadForm()
