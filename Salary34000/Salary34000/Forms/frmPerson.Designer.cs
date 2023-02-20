@@ -30,6 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dtpMarriageDate = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmbMaritalStatus = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbMilitaryService = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtBirthYear = new System.Windows.Forms.TextBox();
@@ -59,6 +65,10 @@
             this.txtPersonelCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtpEmploymentEndDate = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtSuperCollectable = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtConsolidatedInsurance = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtOrganizationPost = new System.Windows.Forms.TextBox();
@@ -78,15 +88,35 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtEducationField = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.cmbMilitaryService = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.radDateTimePicker2 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpMarriageDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDocumentDate)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentEndDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentDate)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -97,6 +127,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
@@ -107,6 +138,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dtpMarriageDate);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.cmbMaritalStatus);
+            this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.cmbMilitaryService);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.txtAge);
@@ -142,8 +177,65 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(689, 338);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "مشخصات عمومی";
+            this.tabPage1.Text = "تاریخ تاهل :";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dtpMarriageDate
+            // 
+            this.dtpMarriageDate.CustomFormat = "yyyy/M/d";
+            this.dtpMarriageDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpMarriageDate.Location = new System.Drawing.Point(144, 214);
+            this.dtpMarriageDate.Name = "dtpMarriageDate";
+            this.dtpMarriageDate.Size = new System.Drawing.Size(123, 20);
+            this.dtpMarriageDate.TabIndex = 36;
+            this.dtpMarriageDate.TabStop = false;
+            this.dtpMarriageDate.Text = "2023/2/18";
+            this.dtpMarriageDate.Value = new System.DateTime(2023, 2, 18, 2, 31, 16, 192);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(273, 215);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(123, 14);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "تاریخ صدور شناسنامه :";
+            // 
+            // cmbMaritalStatus
+            // 
+            this.cmbMaritalStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaritalStatus.FormattingEnabled = true;
+            this.cmbMaritalStatus.Location = new System.Drawing.Point(144, 184);
+            this.cmbMaritalStatus.Name = "cmbMaritalStatus";
+            this.cmbMaritalStatus.Size = new System.Drawing.Size(123, 22);
+            this.cmbMaritalStatus.TabIndex = 34;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(273, 187);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 14);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "وضعیت تاهل :";
+            // 
+            // cmbMilitaryService
+            // 
+            this.cmbMilitaryService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMilitaryService.FormattingEnabled = true;
+            this.cmbMilitaryService.Location = new System.Drawing.Point(144, 156);
+            this.cmbMilitaryService.Name = "cmbMilitaryService";
+            this.cmbMilitaryService.Size = new System.Drawing.Size(123, 22);
+            this.cmbMilitaryService.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(273, 159);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 14);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "وضعیت نظام وظیفه :";
             // 
             // txtAge
             // 
@@ -385,6 +477,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dtpEmploymentEndDate);
+            this.tabPage2.Controls.Add(this.label28);
+            this.tabPage2.Controls.Add(this.txtSuperCollectable);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.txtConsolidatedInsurance);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.txtOrganizationPost);
@@ -402,6 +498,43 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "مشخصات شغلی";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dtpEmploymentEndDate
+            // 
+            this.dtpEmploymentEndDate.CustomFormat = "yyyy/M/d";
+            this.dtpEmploymentEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEmploymentEndDate.Location = new System.Drawing.Point(407, 185);
+            this.dtpEmploymentEndDate.Name = "dtpEmploymentEndDate";
+            this.dtpEmploymentEndDate.Size = new System.Drawing.Size(123, 20);
+            this.dtpEmploymentEndDate.TabIndex = 34;
+            this.dtpEmploymentEndDate.TabStop = false;
+            this.dtpEmploymentEndDate.Text = "2023/2/18";
+            this.dtpEmploymentEndDate.Value = new System.DateTime(2023, 2, 18, 2, 31, 16, 192);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(536, 186);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(99, 14);
+            this.label28.TabIndex = 33;
+            this.label28.Text = "تاریخ پایان قرارداد :";
+            // 
+            // txtSuperCollectable
+            // 
+            this.txtSuperCollectable.Location = new System.Drawing.Point(407, 157);
+            this.txtSuperCollectable.Name = "txtSuperCollectable";
+            this.txtSuperCollectable.Size = new System.Drawing.Size(123, 22);
+            this.txtSuperCollectable.TabIndex = 32;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(536, 160);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(116, 14);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "فوق العاده جمعداری :";
             // 
             // txtConsolidatedInsurance
             // 
@@ -576,23 +709,175 @@
             this.label27.TabIndex = 24;
             this.label27.Text = "رشته تحصیلی :";
             // 
-            // cmbMilitaryService
+            // tabPage4
             // 
-            this.cmbMilitaryService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMilitaryService.FormattingEnabled = true;
-            this.cmbMilitaryService.Location = new System.Drawing.Point(144, 156);
-            this.cmbMilitaryService.Name = "cmbMilitaryService";
-            this.cmbMilitaryService.Size = new System.Drawing.Size(123, 22);
-            this.cmbMilitaryService.TabIndex = 32;
+            this.tabPage4.Controls.Add(this.radDateTimePicker1);
+            this.tabPage4.Controls.Add(this.label29);
+            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.comboBox2);
+            this.tabPage4.Controls.Add(this.label31);
+            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.label32);
+            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.label33);
+            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.label34);
+            this.tabPage4.Controls.Add(this.radDateTimePicker2);
+            this.tabPage4.Controls.Add(this.label35);
+            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Controls.Add(this.label36);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(689, 338);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "مشخصات مالی";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // radDateTimePicker1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(273, 159);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 14);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "وضعیت نظام وظیفه :";
+            this.radDateTimePicker1.CustomFormat = "yyyy/M/d";
+            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.radDateTimePicker1.Location = new System.Drawing.Point(97, 215);
+            this.radDateTimePicker1.Name = "radDateTimePicker1";
+            this.radDateTimePicker1.Size = new System.Drawing.Size(123, 20);
+            this.radDateTimePicker1.TabIndex = 52;
+            this.radDateTimePicker1.TabStop = false;
+            this.radDateTimePicker1.Text = "2023/2/18";
+            this.radDateTimePicker1.Value = new System.DateTime(2023, 2, 18, 2, 31, 16, 192);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(226, 216);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(123, 14);
+            this.label29.TabIndex = 51;
+            this.label29.Text = "تاریخ صدور شناسنامه :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(97, 185);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(123, 22);
+            this.comboBox1.TabIndex = 50;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(226, 188);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(78, 14);
+            this.label30.TabIndex = 49;
+            this.label30.Text = "وضعیت تاهل :";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(97, 157);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(123, 22);
+            this.comboBox2.TabIndex = 48;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(226, 160);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(110, 14);
+            this.label31.TabIndex = 47;
+            this.label31.Text = "وضعیت نظام وظیفه :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(97, 101);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(123, 22);
+            this.textBox1.TabIndex = 46;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(226, 104);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(36, 14);
+            this.label32.TabIndex = 45;
+            this.label32.Text = "سن :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(97, 73);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(123, 22);
+            this.textBox2.TabIndex = 44;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(226, 76);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(61, 14);
+            this.label33.TabIndex = 43;
+            this.label33.Text = "سال تولد :";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(97, 129);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(123, 22);
+            this.textBox3.TabIndex = 42;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(226, 132);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(60, 14);
+            this.label34.TabIndex = 41;
+            this.label34.Text = "محل تولد :";
+            // 
+            // radDateTimePicker2
+            // 
+            this.radDateTimePicker2.CustomFormat = "yyyy/M/d";
+            this.radDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.radDateTimePicker2.Location = new System.Drawing.Point(97, 47);
+            this.radDateTimePicker2.Name = "radDateTimePicker2";
+            this.radDateTimePicker2.Size = new System.Drawing.Size(123, 20);
+            this.radDateTimePicker2.TabIndex = 40;
+            this.radDateTimePicker2.TabStop = false;
+            this.radDateTimePicker2.Text = "2023/2/18";
+            this.radDateTimePicker2.Value = new System.DateTime(2023, 2, 18, 2, 31, 16, 192);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(226, 48);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(59, 14);
+            this.label35.TabIndex = 39;
+            this.label35.Text = "تاریخ تولد :";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(97, 17);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(123, 22);
+            this.textBox4.TabIndex = 38;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(226, 20);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(124, 14);
+            this.label36.TabIndex = 37;
+            this.label36.Text = "محل صدور شناسنامه :";
             // 
             // frmPerson
             // 
@@ -608,13 +893,19 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpMarriageDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBirthDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDocumentDate)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentEndDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentDate)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -673,5 +964,30 @@
         private ComboBox cmbEducation;
         private ComboBox cmbMilitaryService;
         private Label label15;
+        private ComboBox cmbMaritalStatus;
+        private Label label16;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpMarriageDate;
+        private Label label17;
+        private TextBox txtSuperCollectable;
+        private Label label18;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpEmploymentEndDate;
+        private Label label28;
+        private TabPage tabPage4;
+        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
+        private Label label29;
+        private ComboBox comboBox1;
+        private Label label30;
+        private ComboBox comboBox2;
+        private Label label31;
+        private TextBox textBox1;
+        private Label label32;
+        private TextBox textBox2;
+        private Label label33;
+        private TextBox textBox3;
+        private Label label34;
+        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker2;
+        private Label label35;
+        private TextBox textBox4;
+        private Label label36;
     }
 }

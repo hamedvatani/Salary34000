@@ -69,6 +69,13 @@ public class Person : BaseModel, INotifyPropertyChanged
     public string EducationPlace { get; set; } = "";
     public double EducationAverage { get; set; }
     [ForeignKey(nameof(MilitaryService))] public int MilitaryServiceId { get; set; }
+    public MaritalStatusEnum MaritalStatus { get; set; }
+    public DateTime MarriageDate { get; set; }
+    public double SuperCollectable { get; set; }
+    public DateTime EmploymentEndDate { get; set; }
+    public long OldBaseSummery { get; set; }
+    public long OldHokmSummery { get; set; }
+    public int JobScore { get; set; }
 
     #endregion
 

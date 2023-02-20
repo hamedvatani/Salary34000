@@ -62,6 +62,10 @@ namespace Salary34000.Forms
             BindTextbox(txtEducationPlace);
             BindTextbox(txtEducationAverage);
             BindCombobox(cmbMilitaryService, "Id");
+            BindCombobox(cmbMaritalStatus);
+            BindDateTimePicker(dtpMarriageDate);
+            BindTextbox(txtSuperCollectable);
+            BindDateTimePicker(dtpEmploymentEndDate);
         }
 
         private void BindTextbox(TextBox textBox)
@@ -100,6 +104,10 @@ namespace Salary34000.Forms
             cmbMilitaryService.DataSource = _context.MilitaryServices.ToArray();
             cmbMilitaryService.DisplayMember = "Description";
             cmbMilitaryService.ValueMember = "Id";
+
+            cmbMaritalStatus.DataSource = typeof(MaritalStatusEnum).GetComboItems();
+            cmbMaritalStatus.DisplayMember = "EnumDescription";
+            cmbMaritalStatus.ValueMember = "EnumValue";
         }
 
         private void LoadForm()

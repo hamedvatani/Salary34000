@@ -43,7 +43,9 @@ namespace Salary34000
                     EducationId = 5,
                     EducationField = "مهندسی کامپیوتر - معماری کامپیوتر",
                     EducationPlace = "دانشگاه تهران",
-                    MilitaryServiceId = 5
+                    MilitaryServiceId = 5,
+                    MaritalStatus = MaritalStatusEnum.Married,
+                    MarriageDate=new PersianCalendar().ToDateTime(1382,1,21,0,0,0,0)
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();
