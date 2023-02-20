@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,23 +14,31 @@ using Telerik.WinControls.UI;
 
 namespace Salary34000.Forms
 {
-    public partial class frmPerson : Form
+    public partial class PersonForm : Form
     {
         public int PersonId { get; set; }
         private Person? _person;
-        private BindingSource _bsPerson;
+        private BindingSource _bsPerson = null!;
         private readonly SalaryContext _context;
 
-        public frmPerson(SalaryContext context)
+        public PersonForm(SalaryContext context)
         {
             _context = context;
             InitializeComponent();
         }
 
-        private void frmPerson_Load(object sender, EventArgs e)
+        private void PersonForm_Load(object sender, EventArgs e)
         {
             FillCombos();
             _person = _context.Persons.FirstOrDefault(p => p.Id == PersonId);
+            if (_person == null)
+            {
+                MessageBox.Show("فرد مورد نظر پیدا نشد", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+                return;
+            }
+
+            _person.SetContext(_context);
             _bsPerson = new BindingSource(_person, "");
             BindControls();
         }
@@ -66,6 +73,14 @@ namespace Salary34000.Forms
             BindDateTimePicker(dtpMarriageDate);
             BindTextbox(txtSuperCollectable);
             BindDateTimePicker(dtpEmploymentEndDate);
+            BindTextbox(txtOldBaseSummery);
+            BindTextbox(txtOldHokmSummery);
+            BindTextbox(txtJobScore);
+            BindCombobox(cmbJobGroup, "Id");
+            BindCombobox(cmbOccupation, "Id");
+            BindCombobox(cmbEducationRelationStatus, "Id");
+            BindCombobox(cmbProfessionalPath, "Id");
+            BindTextbox(txtEducationScore);
         }
 
         private void BindTextbox(TextBox textBox)
@@ -108,29 +123,22 @@ namespace Salary34000.Forms
             cmbMaritalStatus.DataSource = typeof(MaritalStatusEnum).GetComboItems();
             cmbMaritalStatus.DisplayMember = "EnumDescription";
             cmbMaritalStatus.ValueMember = "EnumValue";
-        }
 
-        private void LoadForm()
-        {
-            // if (_person == null)
-            //     return;
-            // txtPersonelCode.Text = _person.PersonelCode;
-            // txtFirstName.Text = _person.FirstName;
-            // txtLastName.Text = _person.LastName;
-            // txtNationalCode.Text = _person.NationalCode;
-            // txtDocumentNumber.Text = _person.DocumentNumber;
-            // txtDocumentSerial.Text = _person.DocumentSerial;
-            // cmbGender.SelectedValue = _person.Gender;
-            // txtChildrenCount.Text = _person.ChildrenCount.ToString();
-            // dtpDocumentDate.Value = _person.DocumentDate;
-            // txtDocumentCity.Text = _person.DocumentCity;
-            // dtpBirthDate.Value = _person.BirthDate;
-            // txtBirthCity.Text = _person.BirthCity;
-        }
+            cmbJobGroup.DataSource = _context.JobGroups.ToArray();
+            cmbJobGroup.DisplayMember = "Description";
+            cmbJobGroup.ValueMember = "Id";
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            _person.FirstName = "احمد";
+            cmbOccupation.DataSource = _context.Occupations.ToArray();
+            cmbOccupation.DisplayMember = "Description";
+            cmbOccupation.ValueMember = "Id";
+
+            cmbEducationRelationStatus.DataSource = _context.EducationRelationStatuses.ToArray();
+            cmbEducationRelationStatus.DisplayMember = "Description";
+            cmbEducationRelationStatus.ValueMember = "Id";
+
+            cmbProfessionalPath.DataSource = _context.ProfessionalPaths.ToArray();
+            cmbProfessionalPath.DisplayMember = "Description";
+            cmbProfessionalPath.ValueMember = "Id";
         }
     }
 }

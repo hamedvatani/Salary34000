@@ -1,6 +1,6 @@
 ﻿namespace Salary34000.Forms
 {
-    partial class frmPerson
+    partial class PersonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -80,6 +80,8 @@
             this.dtpEmploymentDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtEducationScore = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.cmbEducation = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txtEducationAverage = new System.Windows.Forms.TextBox();
@@ -89,22 +91,20 @@
             this.txtEducationField = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
-            this.label29 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.radDateTimePicker2 = new Telerik.WinControls.UI.RadDateTimePicker();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
+            this.cmbProfessionalPath = new System.Windows.Forms.ComboBox();
+            this.cmbEducationRelationStatus = new System.Windows.Forms.ComboBox();
+            this.cmbOccupation = new System.Windows.Forms.ComboBox();
+            this.cmbJobGroup = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtJobScore = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtOldHokmSummery = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtOldBaseSummery = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpMarriageDate)).BeginInit();
@@ -115,8 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpEmploymentDate)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -134,7 +132,7 @@
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(697, 365);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -184,7 +182,7 @@
             // 
             this.dtpMarriageDate.CustomFormat = "yyyy/M/d";
             this.dtpMarriageDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMarriageDate.Location = new System.Drawing.Point(144, 214);
+            this.dtpMarriageDate.Location = new System.Drawing.Point(147, 217);
             this.dtpMarriageDate.Name = "dtpMarriageDate";
             this.dtpMarriageDate.Size = new System.Drawing.Size(123, 20);
             this.dtpMarriageDate.TabIndex = 36;
@@ -195,7 +193,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(273, 215);
+            this.label17.Location = new System.Drawing.Point(276, 218);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(123, 14);
             this.label17.TabIndex = 35;
@@ -213,7 +211,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(273, 187);
+            this.label16.Location = new System.Drawing.Point(276, 190);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 14);
             this.label16.TabIndex = 33;
@@ -231,7 +229,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(273, 159);
+            this.label15.Location = new System.Drawing.Point(276, 162);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 14);
             this.label15.TabIndex = 31;
@@ -248,7 +246,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(273, 103);
+            this.label14.Location = new System.Drawing.Point(276, 106);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 14);
             this.label14.TabIndex = 29;
@@ -265,7 +263,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(273, 75);
+            this.label13.Location = new System.Drawing.Point(276, 78);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 14);
             this.label13.TabIndex = 27;
@@ -281,7 +279,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(273, 131);
+            this.label12.Location = new System.Drawing.Point(276, 134);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 14);
             this.label12.TabIndex = 25;
@@ -291,7 +289,7 @@
             // 
             this.dtpBirthDate.CustomFormat = "yyyy/M/d";
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDate.Location = new System.Drawing.Point(144, 46);
+            this.dtpBirthDate.Location = new System.Drawing.Point(147, 49);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(123, 20);
             this.dtpBirthDate.TabIndex = 24;
@@ -302,7 +300,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(273, 47);
+            this.label11.Location = new System.Drawing.Point(276, 50);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 14);
             this.label11.TabIndex = 23;
@@ -318,7 +316,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(273, 19);
+            this.label10.Location = new System.Drawing.Point(276, 22);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(124, 14);
             this.label10.TabIndex = 21;
@@ -328,7 +326,7 @@
             // 
             this.dtpDocumentDate.CustomFormat = "yyyy/M/d";
             this.dtpDocumentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDocumentDate.Location = new System.Drawing.Point(424, 242);
+            this.dtpDocumentDate.Location = new System.Drawing.Point(427, 245);
             this.dtpDocumentDate.Name = "dtpDocumentDate";
             this.dtpDocumentDate.Size = new System.Drawing.Size(123, 20);
             this.dtpDocumentDate.TabIndex = 20;
@@ -339,7 +337,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(553, 243);
+            this.label9.Location = new System.Drawing.Point(556, 246);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 14);
             this.label9.TabIndex = 17;
@@ -355,7 +353,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(553, 215);
+            this.label8.Location = new System.Drawing.Point(556, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 14);
             this.label8.TabIndex = 15;
@@ -373,7 +371,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(553, 187);
+            this.label7.Location = new System.Drawing.Point(556, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 14);
             this.label7.TabIndex = 12;
@@ -389,7 +387,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(553, 159);
+            this.label5.Location = new System.Drawing.Point(556, 162);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 14);
             this.label5.TabIndex = 10;
@@ -405,7 +403,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(553, 131);
+            this.label6.Location = new System.Drawing.Point(556, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 14);
             this.label6.TabIndex = 8;
@@ -421,7 +419,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(553, 103);
+            this.label3.Location = new System.Drawing.Point(556, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 14);
             this.label3.TabIndex = 6;
@@ -437,7 +435,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(553, 75);
+            this.label4.Location = new System.Drawing.Point(556, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 14);
             this.label4.TabIndex = 4;
@@ -453,7 +451,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(553, 47);
+            this.label2.Location = new System.Drawing.Point(556, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 14);
             this.label2.TabIndex = 2;
@@ -469,7 +467,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(553, 19);
+            this.label1.Location = new System.Drawing.Point(556, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 14);
             this.label1.TabIndex = 0;
@@ -503,7 +501,7 @@
             // 
             this.dtpEmploymentEndDate.CustomFormat = "yyyy/M/d";
             this.dtpEmploymentEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEmploymentEndDate.Location = new System.Drawing.Point(407, 185);
+            this.dtpEmploymentEndDate.Location = new System.Drawing.Point(410, 188);
             this.dtpEmploymentEndDate.Name = "dtpEmploymentEndDate";
             this.dtpEmploymentEndDate.Size = new System.Drawing.Size(123, 20);
             this.dtpEmploymentEndDate.TabIndex = 34;
@@ -514,7 +512,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(536, 186);
+            this.label28.Location = new System.Drawing.Point(539, 189);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(99, 14);
             this.label28.TabIndex = 33;
@@ -530,7 +528,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(536, 160);
+            this.label18.Location = new System.Drawing.Point(539, 163);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(116, 14);
             this.label18.TabIndex = 31;
@@ -546,7 +544,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(536, 132);
+            this.label23.Location = new System.Drawing.Point(539, 135);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(113, 14);
             this.label23.TabIndex = 29;
@@ -562,7 +560,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(536, 104);
+            this.label22.Location = new System.Drawing.Point(539, 107);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(91, 14);
             this.label22.TabIndex = 27;
@@ -580,7 +578,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(536, 76);
+            this.label21.Location = new System.Drawing.Point(539, 79);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(74, 14);
             this.label21.TabIndex = 25;
@@ -598,7 +596,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(536, 48);
+            this.label20.Location = new System.Drawing.Point(539, 51);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(78, 14);
             this.label20.TabIndex = 23;
@@ -608,7 +606,7 @@
             // 
             this.dtpEmploymentDate.CustomFormat = "yyyy/M/d";
             this.dtpEmploymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEmploymentDate.Location = new System.Drawing.Point(407, 19);
+            this.dtpEmploymentDate.Location = new System.Drawing.Point(410, 22);
             this.dtpEmploymentDate.Name = "dtpEmploymentDate";
             this.dtpEmploymentDate.Size = new System.Drawing.Size(123, 20);
             this.dtpEmploymentDate.TabIndex = 22;
@@ -619,7 +617,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(536, 20);
+            this.label19.Location = new System.Drawing.Point(539, 23);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(85, 14);
             this.label19.TabIndex = 21;
@@ -627,6 +625,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txtEducationScore);
+            this.tabPage3.Controls.Add(this.label29);
             this.tabPage3.Controls.Add(this.cmbEducation);
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Controls.Add(this.txtEducationAverage);
@@ -643,6 +643,22 @@
             this.tabPage3.Text = "مشخصات تحصیلی";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // txtEducationScore
+            // 
+            this.txtEducationScore.Location = new System.Drawing.Point(439, 129);
+            this.txtEducationScore.Name = "txtEducationScore";
+            this.txtEducationScore.Size = new System.Drawing.Size(123, 22);
+            this.txtEducationScore.TabIndex = 34;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(571, 135);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(109, 14);
+            this.label29.TabIndex = 33;
+            this.label29.Text = "امتیاز دوره تحصیلی :";
+            // 
             // cmbEducation
             // 
             this.cmbEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -655,7 +671,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(568, 20);
+            this.label24.Location = new System.Drawing.Point(571, 23);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(58, 14);
             this.label24.TabIndex = 30;
@@ -671,7 +687,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(568, 104);
+            this.label25.Location = new System.Drawing.Point(571, 107);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(42, 14);
             this.label25.TabIndex = 28;
@@ -687,7 +703,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(568, 76);
+            this.label26.Location = new System.Drawing.Point(571, 79);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(75, 14);
             this.label26.TabIndex = 26;
@@ -703,7 +719,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(568, 48);
+            this.label27.Location = new System.Drawing.Point(571, 51);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(86, 14);
             this.label27.TabIndex = 24;
@@ -711,22 +727,20 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.radDateTimePicker1);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.comboBox2);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.label34);
-            this.tabPage4.Controls.Add(this.radDateTimePicker2);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.label36);
+            this.tabPage4.Controls.Add(this.cmbProfessionalPath);
+            this.tabPage4.Controls.Add(this.cmbEducationRelationStatus);
+            this.tabPage4.Controls.Add(this.cmbOccupation);
+            this.tabPage4.Controls.Add(this.cmbJobGroup);
+            this.tabPage4.Controls.Add(this.label42);
+            this.tabPage4.Controls.Add(this.label43);
+            this.tabPage4.Controls.Add(this.label44);
+            this.tabPage4.Controls.Add(this.label39);
+            this.tabPage4.Controls.Add(this.txtJobScore);
+            this.tabPage4.Controls.Add(this.label40);
+            this.tabPage4.Controls.Add(this.txtOldHokmSummery);
+            this.tabPage4.Controls.Add(this.label38);
+            this.tabPage4.Controls.Add(this.txtOldBaseSummery);
+            this.tabPage4.Controls.Add(this.label37);
             this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -735,161 +749,137 @@
             this.tabPage4.Text = "مشخصات مالی";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // radDateTimePicker1
+            // cmbProfessionalPath
             // 
-            this.radDateTimePicker1.CustomFormat = "yyyy/M/d";
-            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.radDateTimePicker1.Location = new System.Drawing.Point(97, 215);
-            this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.Size = new System.Drawing.Size(123, 20);
-            this.radDateTimePicker1.TabIndex = 52;
-            this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "2023/2/18";
-            this.radDateTimePicker1.Value = new System.DateTime(2023, 2, 18, 2, 31, 16, 192);
+            this.cmbProfessionalPath.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProfessionalPath.FormattingEnabled = true;
+            this.cmbProfessionalPath.Location = new System.Drawing.Point(413, 185);
+            this.cmbProfessionalPath.Name = "cmbProfessionalPath";
+            this.cmbProfessionalPath.Size = new System.Drawing.Size(123, 22);
+            this.cmbProfessionalPath.TabIndex = 72;
             // 
-            // label29
+            // cmbEducationRelationStatus
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(226, 216);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(123, 14);
-            this.label29.TabIndex = 51;
-            this.label29.Text = "تاریخ صدور شناسنامه :";
+            this.cmbEducationRelationStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEducationRelationStatus.FormattingEnabled = true;
+            this.cmbEducationRelationStatus.Location = new System.Drawing.Point(413, 157);
+            this.cmbEducationRelationStatus.Name = "cmbEducationRelationStatus";
+            this.cmbEducationRelationStatus.Size = new System.Drawing.Size(123, 22);
+            this.cmbEducationRelationStatus.TabIndex = 71;
             // 
-            // comboBox1
+            // cmbOccupation
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 185);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 22);
-            this.comboBox1.TabIndex = 50;
+            this.cmbOccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOccupation.FormattingEnabled = true;
+            this.cmbOccupation.Location = new System.Drawing.Point(413, 129);
+            this.cmbOccupation.Name = "cmbOccupation";
+            this.cmbOccupation.Size = new System.Drawing.Size(123, 22);
+            this.cmbOccupation.TabIndex = 70;
             // 
-            // label30
+            // cmbJobGroup
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(226, 188);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(78, 14);
-            this.label30.TabIndex = 49;
-            this.label30.Text = "وضعیت تاهل :";
+            this.cmbJobGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbJobGroup.FormattingEnabled = true;
+            this.cmbJobGroup.Location = new System.Drawing.Point(413, 101);
+            this.cmbJobGroup.Name = "cmbJobGroup";
+            this.cmbJobGroup.Size = new System.Drawing.Size(123, 22);
+            this.cmbJobGroup.TabIndex = 69;
             // 
-            // comboBox2
+            // label42
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(97, 157);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(123, 22);
-            this.comboBox2.TabIndex = 48;
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(545, 191);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(89, 14);
+            this.label42.TabIndex = 65;
+            this.label42.Text = "مسیر حرفه ای :";
             // 
-            // label31
+            // label43
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(226, 160);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(110, 14);
-            this.label31.TabIndex = 47;
-            this.label31.Text = "وضعیت نظام وظیفه :";
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(545, 163);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(88, 14);
+            this.label43.TabIndex = 63;
+            this.label43.Text = "ارتباط تحصیلات :";
             // 
-            // textBox1
+            // label44
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(123, 22);
-            this.textBox1.TabIndex = 46;
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(545, 135);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(80, 14);
+            this.label44.TabIndex = 61;
+            this.label44.Text = "رسته شغلی :";
             // 
-            // label32
+            // label39
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(226, 104);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(36, 14);
-            this.label32.TabIndex = 45;
-            this.label32.Text = "سن :";
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(545, 107);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(75, 14);
+            this.label39.TabIndex = 59;
+            this.label39.Text = "گروه شغلی :";
             // 
-            // textBox2
+            // txtJobScore
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(123, 22);
-            this.textBox2.TabIndex = 44;
+            this.txtJobScore.Location = new System.Drawing.Point(413, 73);
+            this.txtJobScore.Name = "txtJobScore";
+            this.txtJobScore.Size = new System.Drawing.Size(123, 22);
+            this.txtJobScore.TabIndex = 58;
             // 
-            // label33
+            // label40
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(226, 76);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 14);
-            this.label33.TabIndex = 43;
-            this.label33.Text = "سال تولد :";
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(545, 79);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(71, 14);
+            this.label40.TabIndex = 57;
+            this.label40.Text = "امتیاز شغل :";
             // 
-            // textBox3
+            // txtOldHokmSummery
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 129);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(123, 22);
-            this.textBox3.TabIndex = 42;
+            this.txtOldHokmSummery.Location = new System.Drawing.Point(413, 45);
+            this.txtOldHokmSummery.Name = "txtOldHokmSummery";
+            this.txtOldHokmSummery.Size = new System.Drawing.Size(123, 22);
+            this.txtOldHokmSummery.TabIndex = 56;
             // 
-            // label34
+            // label38
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(226, 132);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(60, 14);
-            this.label34.TabIndex = 41;
-            this.label34.Text = "محل تولد :";
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(545, 51);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(92, 14);
+            this.label38.TabIndex = 55;
+            this.label38.Text = "جمع حکم قبلی :";
             // 
-            // radDateTimePicker2
+            // txtOldBaseSummery
             // 
-            this.radDateTimePicker2.CustomFormat = "yyyy/M/d";
-            this.radDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.radDateTimePicker2.Location = new System.Drawing.Point(97, 47);
-            this.radDateTimePicker2.Name = "radDateTimePicker2";
-            this.radDateTimePicker2.Size = new System.Drawing.Size(123, 20);
-            this.radDateTimePicker2.TabIndex = 40;
-            this.radDateTimePicker2.TabStop = false;
-            this.radDateTimePicker2.Text = "2023/2/18";
-            this.radDateTimePicker2.Value = new System.DateTime(2023, 2, 18, 2, 31, 16, 192);
+            this.txtOldBaseSummery.Location = new System.Drawing.Point(413, 17);
+            this.txtOldBaseSummery.Name = "txtOldBaseSummery";
+            this.txtOldBaseSummery.Size = new System.Drawing.Size(123, 22);
+            this.txtOldBaseSummery.TabIndex = 54;
             // 
-            // label35
+            // label37
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(226, 48);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(59, 14);
-            this.label35.TabIndex = 39;
-            this.label35.Text = "تاریخ تولد :";
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(545, 23);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(98, 14);
+            this.label37.TabIndex = 53;
+            this.label37.Text = "جمع مبنای قبلی :";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(97, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(123, 22);
-            this.textBox4.TabIndex = 38;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(226, 20);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(124, 14);
-            this.label36.TabIndex = 37;
-            this.label36.Text = "محل صدور شناسنامه :";
-            // 
-            // frmPerson
+            // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 411);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "frmPerson";
+            this.Name = "PersonForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "مشخصات شاغل";
-            this.Load += new System.EventHandler(this.frmPerson_Load);
+            this.Load += new System.EventHandler(this.PersonForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -904,8 +894,6 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -914,6 +902,28 @@
 
         private TabControl tabControl1;
         private TabPage tabPage1;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpMarriageDate;
+        private Label label17;
+        private ComboBox cmbMaritalStatus;
+        private Label label16;
+        private ComboBox cmbMilitaryService;
+        private Label label15;
+        private TextBox txtAge;
+        private Label label14;
+        private TextBox txtBirthYear;
+        private Label label13;
+        private TextBox txtBirthCity;
+        private Label label12;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpBirthDate;
+        private Label label11;
+        private TextBox txtDocumentCity;
+        private Label label10;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpDocumentDate;
+        private Label label9;
+        private TextBox txtChildrenCount;
+        private Label label8;
+        private ComboBox cmbGender;
+        private Label label7;
         private TextBox txtDocumentSerial;
         private Label label5;
         private TextBox txtDocumentNumber;
@@ -927,33 +937,24 @@
         private TextBox txtPersonelCode;
         private Label label1;
         private TabPage tabPage2;
-        private ComboBox cmbGender;
-        private Label label7;
-        private TextBox txtChildrenCount;
-        private Label label8;
-        private Label label9;
-        private Telerik.WinControls.UI.RadDateTimePicker dtpDocumentDate;
-        private TextBox txtDocumentCity;
-        private Label label10;
-        private TextBox txtBirthCity;
-        private Label label12;
-        private Telerik.WinControls.UI.RadDateTimePicker dtpBirthDate;
-        private Label label11;
-        private TextBox txtBirthYear;
-        private Label label13;
-        private TextBox txtAge;
-        private Label label14;
-        private Telerik.WinControls.UI.RadDateTimePicker dtpEmploymentDate;
-        private Label label19;
-        private ComboBox cmbEmploymentType;
-        private Label label20;
-        private ComboBox cmbOrganizationUnit;
-        private Label label21;
-        private TextBox txtOrganizationPost;
-        private Label label22;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpEmploymentEndDate;
+        private Label label28;
+        private TextBox txtSuperCollectable;
+        private Label label18;
         private TextBox txtConsolidatedInsurance;
         private Label label23;
+        private TextBox txtOrganizationPost;
+        private Label label22;
+        private ComboBox cmbOrganizationUnit;
+        private Label label21;
+        private ComboBox cmbEmploymentType;
+        private Label label20;
+        private Telerik.WinControls.UI.RadDateTimePicker dtpEmploymentDate;
+        private Label label19;
         private TabPage tabPage3;
+        private TextBox txtEducationScore;
+        private Label label29;
+        private ComboBox cmbEducation;
         private Label label24;
         private TextBox txtEducationAverage;
         private Label label25;
@@ -961,33 +962,20 @@
         private Label label26;
         private TextBox txtEducationField;
         private Label label27;
-        private ComboBox cmbEducation;
-        private ComboBox cmbMilitaryService;
-        private Label label15;
-        private ComboBox cmbMaritalStatus;
-        private Label label16;
-        private Telerik.WinControls.UI.RadDateTimePicker dtpMarriageDate;
-        private Label label17;
-        private TextBox txtSuperCollectable;
-        private Label label18;
-        private Telerik.WinControls.UI.RadDateTimePicker dtpEmploymentEndDate;
-        private Label label28;
         private TabPage tabPage4;
-        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
-        private Label label29;
-        private ComboBox comboBox1;
-        private Label label30;
-        private ComboBox comboBox2;
-        private Label label31;
-        private TextBox textBox1;
-        private Label label32;
-        private TextBox textBox2;
-        private Label label33;
-        private TextBox textBox3;
-        private Label label34;
-        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker2;
-        private Label label35;
-        private TextBox textBox4;
-        private Label label36;
+        private ComboBox cmbProfessionalPath;
+        private ComboBox cmbEducationRelationStatus;
+        private ComboBox cmbOccupation;
+        private ComboBox cmbJobGroup;
+        private Label label42;
+        private Label label43;
+        private Label label44;
+        private Label label39;
+        private TextBox txtJobScore;
+        private Label label40;
+        private TextBox txtOldHokmSummery;
+        private Label label38;
+        private TextBox txtOldBaseSummery;
+        private Label label37;
     }
 }

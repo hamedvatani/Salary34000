@@ -45,12 +45,19 @@ namespace Salary34000
                     EducationPlace = "دانشگاه تهران",
                     MilitaryServiceId = 5,
                     MaritalStatus = MaritalStatusEnum.Married,
-                    MarriageDate=new PersianCalendar().ToDateTime(1382,1,21,0,0,0,0)
+                    MarriageDate = new PersianCalendar().ToDateTime(1382, 1, 21, 0, 0, 0, 0),
+                    OldBaseSummery = 226735691,
+                    OldHokmSummery = 255399341,
+                    JobScore = 5347,
+                    JobGroupId = 21,
+                    OccupationId = 1,
+                    EducationRelationStatusId = 1,
+                    ProfessionalPathId = 2
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();
             }
-            var frm = Program.ServiceProvider.GetRequiredService<frmPerson>();
+            var frm = Program.ServiceProvider.GetRequiredService<PersonForm>();
             frm.PersonId = p.Id;
             frm.ShowDialog();
             Close();

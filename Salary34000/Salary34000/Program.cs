@@ -39,7 +39,7 @@ namespace Salary34000
                 {
                     services.AddDbContext<SalaryContext>();
                     services.AddTransient<Form1>();
-                    services.AddTransient<frmPerson>();
+                    services.AddTransient<PersonForm>();
                 });
         }
     }

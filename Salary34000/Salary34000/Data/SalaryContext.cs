@@ -10,6 +10,10 @@ public class SalaryContext : DbContext
     public DbSet<OrganizationUnit> OrganizationUnits { get; set; } = null!;
     public DbSet<Education> Educations { get; set; } = null!;
     public DbSet<MilitaryService> MilitaryServices { get; set; } = null!;
+    public DbSet<JobGroup> JobGroups { get; set; } = null!;
+    public DbSet<Occupation> Occupations { get; set; } = null!;
+    public DbSet<EducationRelationStatus> EducationRelationStatuses { get; set; } = null!;
+    public DbSet<ProfessionalPath> ProfessionalPaths { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -230,6 +234,408 @@ public class SalaryContext : DbContext
             {
                 Id = 10,
                 Description = "معافیت موارد خاص"
+            }
+        );
+        modelBuilder.Entity<JobGroup>().HasData(
+            new JobGroup
+            {
+                Id = 1,
+                Description = "1",
+                // ProportionIncrease = 1,
+                // IncreaseCoefficient = 0,
+                // CumulativeCoefficient = 0,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 2,
+                Description = "2",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.02,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 3,
+                Description = "3",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.04,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 4,
+                Description = "4",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.06,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 5,
+                Description = "5",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.08,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 6,
+                Description = "6",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.1,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 7,
+                Description = "7",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.12,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 8,
+                Description = "8",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = 0.14,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 9,
+                Description = "9",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 10,
+                Description = "10",
+                // ProportionIncrease = 1.02,
+                // IncreaseCoefficient = 0.02,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 11,
+                Description = "11",
+                // ProportionIncrease = 1.05,
+                // IncreaseCoefficient = 0.05,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 12,
+                Description = "12",
+                // ProportionIncrease = 1.05,
+                // IncreaseCoefficient = 0.05,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 13,
+                Description = "13",
+                // ProportionIncrease = 1.05,
+                // IncreaseCoefficient = 0.05,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 14,
+                Description = "14",
+                // ProportionIncrease = 1.05,
+                // IncreaseCoefficient = 0.05,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 15,
+                Description = "15",
+                // ProportionIncrease = 1.05,
+                // IncreaseCoefficient = 0.05,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 16,
+                Description = "16",
+                // ProportionIncrease = 1.06,
+                // IncreaseCoefficient = 0.06,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 17,
+                Description = "17",
+                // ProportionIncrease = 1.06,
+                // IncreaseCoefficient = 0.06,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 18,
+                Description = "18",
+                // ProportionIncrease = 1.06,
+                // IncreaseCoefficient = 0.06,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 19,
+                Description = "19",
+                // ProportionIncrease = 1.06,
+                // IncreaseCoefficient = 0.06,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id =20 ,
+                Description = "20",
+                // ProportionIncrease = 1.06,
+                // IncreaseCoefficient = 0.06,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id =21 ,
+                Description = "A",
+                // ProportionIncrease = 1.07,
+                // IncreaseCoefficient = 0.07,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 22,
+                Description = "B",
+                // ProportionIncrease = 1.07,
+                // IncreaseCoefficient = 0.07,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 23,
+                Description = "C",
+                // ProportionIncrease = 1.07,
+                // IncreaseCoefficient = 0.07,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 24,
+                Description = "D",
+                // ProportionIncrease = 1.07,
+                // IncreaseCoefficient = 0.07,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            },
+            new JobGroup
+            {
+                Id = 25,
+                Description = "E",
+                // ProportionIncrease = 1.07,
+                // IncreaseCoefficient = 0.07,
+                // CumulativeCoefficient = ,
+                // FinalCoefficient = ,
+                // JobExtra = ,
+                // ManagementExtra =
+            }
+        );
+        modelBuilder.Entity<Occupation>().HasData(
+            new Occupation
+            {
+                Id = 1,
+                Description = "صف تخصصی - فنی",
+                Coefficient = 2.8
+            },
+            new Occupation
+            {
+                Id = 2,
+                Description = "صف تخصصی - فنی 1",
+                Coefficient = 2
+            },
+            new Occupation
+            {
+                Id = 3,
+                Description = "صف تخصصی - فنی 2",
+                Coefficient = 1.5
+            },
+            new Occupation
+            {
+                Id = 4,
+                Description = "صف تخصصی - فنی 3",
+                Coefficient = 1.2
+            },
+            new Occupation
+            {
+                Id = 5,
+                Description = "صف تخصصی - پشتیبانی",
+                Coefficient = 2.5
+            },
+            new Occupation
+            {
+                Id = 6,
+                Description = "صف تخصصی - پشتیبانی 1",
+                Coefficient = 1.7
+            },
+            new Occupation
+            {
+                Id = 7,
+                Description = "صف تخصصی - پشتیبانی 2",
+                Coefficient = 1.25
+            },
+            new Occupation
+            {
+                Id = 8,
+                Description = "صف تخصصی - پشتیبانی 3",
+                Coefficient = 1.2
+            },
+            new Occupation
+            {
+                Id = 9,
+                Description = "ستاد تخصصی",
+                Coefficient = 1.1
+            },
+            new Occupation
+            {
+                Id = 10,
+                Description = "ستاد پشتیبانی",
+                Coefficient = 1.05
+            },
+            new Occupation
+            {
+                Id = 11,
+                Description = "ستاد خدماتی",
+                Coefficient = 1
+            }
+        );
+        modelBuilder.Entity<EducationRelationStatus>().HasData(
+            new EducationRelationStatus
+            {
+                Id = 1,
+                Description = "مرتبط",
+                Coefficient = 1
+            },
+            new EducationRelationStatus
+            {
+                Id = 2,
+                Description = "نیمه مرتبط",
+                Coefficient = 0.85
+            },
+            new EducationRelationStatus
+            {
+                Id = 3,
+                Description = "غیر مرتبط",
+                Coefficient = 0.7
+            }
+        );
+        modelBuilder.Entity<ProfessionalPath>().HasData(
+            new ProfessionalPath
+            {
+                Id = 1,
+                Description = "مدیریتی",
+                Amount = 33218504,
+                Coefficient = 1
+            },
+            new ProfessionalPath
+            {
+                Id = 2,
+                Description = "کارشناسی",
+                Amount = 16609252,
+                Coefficient = 0.5
+            },
+            new ProfessionalPath
+            {
+                Id = 3,
+                Description = "کاردانی",
+                Amount = 11072835,
+                Coefficient = 0.33
+            },
+            new ProfessionalPath
+            {
+                Id = 4,
+                Description = "کارمندی",
+                Amount = 8304626,
+                Coefficient = 0.25
+            },
+            new ProfessionalPath
+            {
+                Id = 5,
+                Description = "کارگری",
+                Amount = 6643701,
+                Coefficient = 0.2
             }
         );
     }
