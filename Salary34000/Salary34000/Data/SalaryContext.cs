@@ -15,6 +15,9 @@ public class SalaryContext : DbContext
     public DbSet<EducationRelationStatus> EducationRelationStatuses { get; set; } = null!;
     public DbSet<ProfessionalPath> ProfessionalPaths { get; set; } = null!;
     public DbSet<ExperienceScore> ExperienceScores { get; set; } = null!;
+    public DbSet<Performance> Performances { get; set; } = null!;
+    public DbSet<PersonalGroup> PersonalGroups { get; set; } = null!;
+    public DbSet<Parameter> Parameters { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

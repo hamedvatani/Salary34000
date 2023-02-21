@@ -52,7 +52,17 @@ namespace Salary34000
                     JobGroupId = 21,
                     OccupationId = 1,
                     EducationRelationStatusId = 1,
-                    ProfessionalPathId = 2
+                    ProfessionalPathId = 2,
+                    PerformanceId = 3,
+                    SpecialActivities = 0,
+                    DevelopmentPlan = 2,
+                    RoleExtra = RoleExtraEnum.Negative,
+                    BaseInsurance = "سازمان تامین اجتماعی",
+                    InsuranceNumber = "12158457",
+                    BankName = "ملی",
+                    AccountNumber = "0100293068008",
+                    Mobile = "09123118043",
+                    Address = " تهران،  پونک، سردار جنگل، خ بهار شرقی، خ فجر، ک فجر 2، پلاک 21، واحد 1"
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();

@@ -31,12 +31,36 @@ public class JobGroup : IdDescriptionModel, IHasInitialData
         "E"
     };
 
-    // public double ProportionIncrease { get; set; }
-    // public double IncreaseCoefficient { get; set; }
-    // public double CumulativeCoefficient { get; set; }
-    // public double FinalCoefficient { get; set; }
-    // public double JobExtra { get; set; }
-    // public double ManagementExtra { get; set; }
+    private static readonly double[] ProportionIncreases =
+    {
+        1,
+        1.02,
+        1.02,
+        1.02,
+        1.02,
+        1.02,
+        1.02,
+        1.02,
+        1.02,
+        1.02,
+        1.05,
+        1.05,
+        1.05,
+        1.05,
+        1.05,
+        1.06,
+        1.06,
+        1.06,
+        1.06,
+        1.06,
+        1.07,
+        1.07,
+        1.07,
+        1.07,
+        1.07
+    };
+
+    public double ProportionIncrease { get; set; }
 
     public Array GetInitialData()
     {
@@ -51,7 +75,8 @@ public class JobGroup : IdDescriptionModel, IHasInitialData
             retVal[i] = new JobGroup
             {
                 Id = i + 1,
-                Description = Descriptions[i]
+                Description = Descriptions[i],
+                ProportionIncrease = ProportionIncreases[i]
             };
         }
 

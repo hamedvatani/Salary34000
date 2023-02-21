@@ -11,8 +11,8 @@ using Salary34000.Data;
 namespace Salary34000.Migrations
 {
     [DbContext(typeof(SalaryContext))]
-    [Migration("20230221114819_ExperimentScore")]
-    partial class ExperimentScore
+    [Migration("20230221191851_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1265,6 +1265,9 @@ namespace Salary34000.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("ProportionIncrease")
+                        .HasColumnType("REAL");
+
                     b.HasKey("Id");
 
                     b.ToTable("JobGroups");
@@ -1273,127 +1276,152 @@ namespace Salary34000.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "1"
+                            Description = "1",
+                            ProportionIncrease = 1.0
                         },
                         new
                         {
                             Id = 2,
-                            Description = "2"
+                            Description = "2",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 3,
-                            Description = "3"
+                            Description = "3",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 4,
-                            Description = "4"
+                            Description = "4",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 5,
-                            Description = "5"
+                            Description = "5",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 6,
-                            Description = "6"
+                            Description = "6",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 7,
-                            Description = "7"
+                            Description = "7",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 8,
-                            Description = "8"
+                            Description = "8",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 9,
-                            Description = "9"
+                            Description = "9",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 10,
-                            Description = "10"
+                            Description = "10",
+                            ProportionIncrease = 1.02
                         },
                         new
                         {
                             Id = 11,
-                            Description = "11"
+                            Description = "11",
+                            ProportionIncrease = 1.05
                         },
                         new
                         {
                             Id = 12,
-                            Description = "12"
+                            Description = "12",
+                            ProportionIncrease = 1.05
                         },
                         new
                         {
                             Id = 13,
-                            Description = "13"
+                            Description = "13",
+                            ProportionIncrease = 1.05
                         },
                         new
                         {
                             Id = 14,
-                            Description = "14"
+                            Description = "14",
+                            ProportionIncrease = 1.05
                         },
                         new
                         {
                             Id = 15,
-                            Description = "15"
+                            Description = "15",
+                            ProportionIncrease = 1.05
                         },
                         new
                         {
                             Id = 16,
-                            Description = "16"
+                            Description = "16",
+                            ProportionIncrease = 1.0600000000000001
                         },
                         new
                         {
                             Id = 17,
-                            Description = "17"
+                            Description = "17",
+                            ProportionIncrease = 1.0600000000000001
                         },
                         new
                         {
                             Id = 18,
-                            Description = "18"
+                            Description = "18",
+                            ProportionIncrease = 1.0600000000000001
                         },
                         new
                         {
                             Id = 19,
-                            Description = "19"
+                            Description = "19",
+                            ProportionIncrease = 1.0600000000000001
                         },
                         new
                         {
                             Id = 20,
-                            Description = "20"
+                            Description = "20",
+                            ProportionIncrease = 1.0600000000000001
                         },
                         new
                         {
                             Id = 21,
-                            Description = "A"
+                            Description = "A",
+                            ProportionIncrease = 1.0700000000000001
                         },
                         new
                         {
                             Id = 22,
-                            Description = "B"
+                            Description = "B",
+                            ProportionIncrease = 1.0700000000000001
                         },
                         new
                         {
                             Id = 23,
-                            Description = "C"
+                            Description = "C",
+                            ProportionIncrease = 1.0700000000000001
                         },
                         new
                         {
                             Id = 24,
-                            Description = "D"
+                            Description = "D",
+                            ProportionIncrease = 1.0700000000000001
                         },
                         new
                         {
                             Id = 25,
-                            Description = "E"
+                            Description = "E",
+                            ProportionIncrease = 1.0700000000000001
                         });
                 });
 
@@ -1672,11 +1700,160 @@ namespace Salary34000.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Salary34000.Models.Parameter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("Value")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Parameters");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "پایه حقوق وزارت کار",
+                            Key = "BaseSalary",
+                            Value = 33218504L,
+                            Year = 1401
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "حق اولاد",
+                            Key = "Children",
+                            Value = 4179750L,
+                            Year = 1401
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "حق مسکن",
+                            Key = "Housing",
+                            Value = 6500000L,
+                            Year = 1401
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "بن خواروبار",
+                            Key = "Grocery",
+                            Value = 8500000L,
+                            Year = 1401
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "ایاب و ذهاب",
+                            Key = "Transportation",
+                            Value = 3000000L,
+                            Year = 1401
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "پایه سنوات",
+                            Key = "BaseYears",
+                            Value = 2100000L,
+                            Year = 1401
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "مزد ثابت کلیه سطوح",
+                            Key = "ConstantSalary",
+                            Value = 5151660L,
+                            Year = 1401
+                        });
+                });
+
+            modelBuilder.Entity("Salary34000.Models.Performance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Performances");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "عالی",
+                            Score = 40
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "فراتر از انتظار",
+                            Score = 32
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "در حد انتظار",
+                            Score = 24
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "پایین تر از حد انتظار",
+                            Score = 16
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "ضعیف",
+                            Score = 8
+                        });
+                });
+
             modelBuilder.Entity("Salary34000.Models.Person", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("AccountNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("BankName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("BaseInsurance")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("BirthCity")
                         .IsRequired()
@@ -1690,6 +1867,9 @@ namespace Salary34000.Migrations
 
                     b.Property<double>("ConsolidatedInsurance")
                         .HasColumnType("REAL");
+
+                    b.Property<int>("DevelopmentPlan")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("DocumentCity")
                         .IsRequired()
@@ -1739,6 +1919,10 @@ namespace Salary34000.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("InsuranceNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("JobGroupId")
                         .HasColumnType("INTEGER");
 
@@ -1757,6 +1941,10 @@ namespace Salary34000.Migrations
 
                     b.Property<int>("MilitaryServiceId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("NationalCode")
                         .IsRequired()
@@ -1778,11 +1966,20 @@ namespace Salary34000.Migrations
                     b.Property<int>("OrganizationUnitId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("PerformanceId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("PersonelCode")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("ProfessionalPathId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RoleExtra")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SpecialActivities")
                         .HasColumnType("INTEGER");
 
                     b.Property<long>("SuperCollectable")
@@ -1804,9 +2001,561 @@ namespace Salary34000.Migrations
 
                     b.HasIndex("OrganizationUnitId");
 
+                    b.HasIndex("PerformanceId");
+
                     b.HasIndex("ProfessionalPathId");
 
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("Salary34000.Models.PersonalGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Grade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProfessionalPathId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Score")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfessionalPathId");
+
+                    b.ToTable("PersonalGroups");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Grade = 30,
+                            ProfessionalPathId = 1,
+                            Score = "A"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Grade = 35,
+                            ProfessionalPathId = 1,
+                            Score = "A+"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Grade = 40,
+                            ProfessionalPathId = 1,
+                            Score = "A++"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Grade = 45,
+                            ProfessionalPathId = 1,
+                            Score = "B"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Grade = 50,
+                            ProfessionalPathId = 1,
+                            Score = "B+"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Grade = 55,
+                            ProfessionalPathId = 1,
+                            Score = "B++"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Grade = 60,
+                            ProfessionalPathId = 1,
+                            Score = "C"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Grade = 65,
+                            ProfessionalPathId = 1,
+                            Score = "C+"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Grade = 70,
+                            ProfessionalPathId = 1,
+                            Score = "C++"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Grade = 75,
+                            ProfessionalPathId = 1,
+                            Score = "D"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Grade = 80,
+                            ProfessionalPathId = 1,
+                            Score = "D+"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Grade = 85,
+                            ProfessionalPathId = 1,
+                            Score = "D++"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Grade = 90,
+                            ProfessionalPathId = 1,
+                            Score = "E"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Grade = 95,
+                            ProfessionalPathId = 1,
+                            Score = "E+"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Grade = 100,
+                            ProfessionalPathId = 1,
+                            Score = "E++"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Grade = 30,
+                            ProfessionalPathId = 2,
+                            Score = "16"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Grade = 35,
+                            ProfessionalPathId = 2,
+                            Score = "16+"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Grade = 40,
+                            ProfessionalPathId = 2,
+                            Score = "16++"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Grade = 45,
+                            ProfessionalPathId = 2,
+                            Score = "17"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Grade = 50,
+                            ProfessionalPathId = 2,
+                            Score = "17+"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Grade = 55,
+                            ProfessionalPathId = 2,
+                            Score = "17++"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Grade = 60,
+                            ProfessionalPathId = 2,
+                            Score = "18"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Grade = 65,
+                            ProfessionalPathId = 2,
+                            Score = "18+"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Grade = 70,
+                            ProfessionalPathId = 2,
+                            Score = "18++"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Grade = 75,
+                            ProfessionalPathId = 2,
+                            Score = "19"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Grade = 80,
+                            ProfessionalPathId = 2,
+                            Score = "19+"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Grade = 85,
+                            ProfessionalPathId = 2,
+                            Score = "19++"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Grade = 90,
+                            ProfessionalPathId = 2,
+                            Score = "20"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Grade = 95,
+                            ProfessionalPathId = 2,
+                            Score = "20+"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Grade = 100,
+                            ProfessionalPathId = 2,
+                            Score = "20++"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Grade = 30,
+                            ProfessionalPathId = 3,
+                            Score = "11"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Grade = 35,
+                            ProfessionalPathId = 3,
+                            Score = "11+"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Grade = 40,
+                            ProfessionalPathId = 3,
+                            Score = "11++"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Grade = 45,
+                            ProfessionalPathId = 3,
+                            Score = "12"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Grade = 50,
+                            ProfessionalPathId = 3,
+                            Score = "12+"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Grade = 55,
+                            ProfessionalPathId = 3,
+                            Score = "12++"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Grade = 60,
+                            ProfessionalPathId = 3,
+                            Score = "13"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Grade = 65,
+                            ProfessionalPathId = 3,
+                            Score = "13+"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Grade = 70,
+                            ProfessionalPathId = 3,
+                            Score = "13++"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Grade = 75,
+                            ProfessionalPathId = 3,
+                            Score = "14"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Grade = 80,
+                            ProfessionalPathId = 3,
+                            Score = "14+"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Grade = 85,
+                            ProfessionalPathId = 3,
+                            Score = "14++"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Grade = 90,
+                            ProfessionalPathId = 3,
+                            Score = "15"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Grade = 95,
+                            ProfessionalPathId = 3,
+                            Score = "15+"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Grade = 100,
+                            ProfessionalPathId = 3,
+                            Score = "15++"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Grade = 30,
+                            ProfessionalPathId = 4,
+                            Score = "6"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Grade = 35,
+                            ProfessionalPathId = 4,
+                            Score = "6+"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Grade = 40,
+                            ProfessionalPathId = 4,
+                            Score = "6++"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Grade = 45,
+                            ProfessionalPathId = 4,
+                            Score = "7"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Grade = 50,
+                            ProfessionalPathId = 4,
+                            Score = "7+"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Grade = 55,
+                            ProfessionalPathId = 4,
+                            Score = "7++"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Grade = 60,
+                            ProfessionalPathId = 4,
+                            Score = "8"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Grade = 65,
+                            ProfessionalPathId = 4,
+                            Score = "8+"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Grade = 70,
+                            ProfessionalPathId = 4,
+                            Score = "8++"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Grade = 75,
+                            ProfessionalPathId = 4,
+                            Score = "9"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Grade = 80,
+                            ProfessionalPathId = 4,
+                            Score = "9+"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Grade = 85,
+                            ProfessionalPathId = 4,
+                            Score = "9++"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Grade = 90,
+                            ProfessionalPathId = 4,
+                            Score = "10"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Grade = 95,
+                            ProfessionalPathId = 4,
+                            Score = "10+"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Grade = 100,
+                            ProfessionalPathId = 4,
+                            Score = "10++"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Grade = 30,
+                            ProfessionalPathId = 5,
+                            Score = "1"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Grade = 35,
+                            ProfessionalPathId = 5,
+                            Score = "1+"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Grade = 40,
+                            ProfessionalPathId = 5,
+                            Score = "1++"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Grade = 45,
+                            ProfessionalPathId = 5,
+                            Score = "2"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Grade = 50,
+                            ProfessionalPathId = 5,
+                            Score = "2+"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Grade = 55,
+                            ProfessionalPathId = 5,
+                            Score = "2++"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Grade = 60,
+                            ProfessionalPathId = 5,
+                            Score = "3"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Grade = 65,
+                            ProfessionalPathId = 5,
+                            Score = "3+"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Grade = 70,
+                            ProfessionalPathId = 5,
+                            Score = "3++"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            Grade = 75,
+                            ProfessionalPathId = 5,
+                            Score = "4"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            Grade = 80,
+                            ProfessionalPathId = 5,
+                            Score = "4+"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            Grade = 85,
+                            ProfessionalPathId = 5,
+                            Score = "4++"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            Grade = 90,
+                            ProfessionalPathId = 5,
+                            Score = "5"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            Grade = 95,
+                            ProfessionalPathId = 5,
+                            Score = "5+"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            Grade = 100,
+                            ProfessionalPathId = 5,
+                            Score = "5++"
+                        });
                 });
 
             modelBuilder.Entity("Salary34000.Models.ProfessionalPath", b =>
@@ -1922,6 +2671,12 @@ namespace Salary34000.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Salary34000.Models.Performance", "Performance")
+                        .WithMany()
+                        .HasForeignKey("PerformanceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Salary34000.Models.ProfessionalPath", "ProfessionalPath")
                         .WithMany()
                         .HasForeignKey("ProfessionalPathId")
@@ -1941,6 +2696,19 @@ namespace Salary34000.Migrations
                     b.Navigation("Occupation");
 
                     b.Navigation("OrganizationUnit");
+
+                    b.Navigation("Performance");
+
+                    b.Navigation("ProfessionalPath");
+                });
+
+            modelBuilder.Entity("Salary34000.Models.PersonalGroup", b =>
+                {
+                    b.HasOne("Salary34000.Models.ProfessionalPath", "ProfessionalPath")
+                        .WithMany()
+                        .HasForeignKey("ProfessionalPathId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProfessionalPath");
                 });

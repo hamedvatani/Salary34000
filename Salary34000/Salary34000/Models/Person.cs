@@ -32,6 +32,17 @@ public class Person : BaseModel, INotifyPropertyChanged
     [NotMapped] public double EducationRelationStatusCoefficient => GetEducationRelationStatusCoefficient();
     [NotMapped] public double EducationTotalScore => EducationScore * EducationRelationStatusCoefficient;
     [NotMapped] public double ExperimentScore => GetExperimentScore();
+    [NotMapped] public int PerformanceScore => GetPerformanceScore();
+
+    [NotMapped]
+    public double PersonalGroupScore => EducationTotalScore +
+                                        ExperimentScore +
+                                        PerformanceScore +
+                                        _specialActivities +
+                                        _developmentPlan;
+
+    [NotMapped] public string PersonalGroupName => GetPersonalGroupName();
+    [NotMapped] public long JobWage1 => GetJobWage1();
 
     #endregion
 
@@ -43,6 +54,11 @@ public class Person : BaseModel, INotifyPropertyChanged
     private int _educationRelationStatusId;
     private double _consolidatedInsurance;
     private int _professionalPathId;
+    private int _performanceId;
+    private int _specialActivities;
+    private int _developmentPlan;
+    private int _jobGroupId;
+
     #endregion
 
     #region Public Members
@@ -106,7 +122,18 @@ public class Person : BaseModel, INotifyPropertyChanged
     public long OldBaseSummery { get; set; }
     public long OldHokmSummery { get; set; }
     public int JobScore { get; set; }
-    [ForeignKey(nameof(JobGroup))] public int JobGroupId { get; set; }
+
+    [ForeignKey(nameof(JobGroup))]
+    public int JobGroupId
+    {
+        get => _jobGroupId;
+        set
+        {
+            _jobGroupId = value;
+            OnPropertyChanged();
+        }
+    }
+
     [ForeignKey(nameof(Occupation))] public int OccupationId { get; set; }
 
     [ForeignKey(nameof(EducationRelationStatus))]
@@ -131,6 +158,45 @@ public class Person : BaseModel, INotifyPropertyChanged
         }
     }
 
+    [ForeignKey(nameof(Performance))]
+    public int PerformanceId
+    {
+        get => _performanceId;
+        set
+        {
+            _performanceId = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public int SpecialActivities
+    {
+        get => _specialActivities;
+        set
+        {
+            _specialActivities = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public int DevelopmentPlan
+    {
+        get => _developmentPlan;
+        set
+        {
+            _developmentPlan = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public RoleExtraEnum RoleExtra { get; set; }
+    public string BaseInsurance { get; set; } = "";
+    public string InsuranceNumber { get; set; } = "";
+    public string BankName { get; set; } = "";
+    public string AccountNumber { get; set; } = "";
+    public string Mobile { get; set; } = "";
+    public string Address { get; set; } = "";
+
     #endregion
 
     #region Virtual Members
@@ -143,6 +209,7 @@ public class Person : BaseModel, INotifyPropertyChanged
     public virtual Occupation Occupation { get; set; } = null!;
     public virtual EducationRelationStatus EducationRelationStatus { get; set; } = null!;
     public virtual ProfessionalPath ProfessionalPath { get; set; } = null!;
+    public virtual Performance Performance { get; set; } = null!;
 
     #endregion
 
@@ -176,5 +243,37 @@ public class Person : BaseModel, INotifyPropertyChanged
             .Where(e => e.ProfessionalPathId == _professionalPathId && e.WorkExperience <= _consolidatedInsurance)
             .OrderByDescending(e => e.WorkExperience)
             .FirstOrDefault()?.Score ?? 0;
+    }
+
+    private int GetPerformanceScore()
+    {
+        if (_context == null)
+            return Performance.Score;
+        return _context.Performances.FirstOrDefault(e => e.Id == _performanceId)
+            ?.Score ?? Performance.Score;
+    }
+
+    private string GetPersonalGroupName()
+    {
+        if (_context == null)
+            return "0";
+
+        return _context.PersonalGroups
+            .Where(p => p.ProfessionalPathId == _professionalPathId && p.Grade <= PersonalGroupScore)
+            .OrderByDescending(e => e.Grade)
+            .FirstOrDefault()?.Score ?? "";
+    }
+
+    private long GetJobWage1()
+    {
+        if (_context == null)
+            return 0;
+
+        var coefficient = _context.JobGroups
+            .Where(j => j.Id <= _jobGroupId)
+            .Select(x => x.ProportionIncrease - 1)
+            .Sum() + 1;
+        var baseSalary = _context.Parameters.FirstOrDefault(p => p.Key == "BaseSalary")?.Value ?? 0;
+        return (long)(coefficient * baseSalary);
     }
 }
