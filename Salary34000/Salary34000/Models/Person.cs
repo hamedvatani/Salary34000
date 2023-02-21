@@ -29,6 +29,9 @@ public class Person : BaseModel, INotifyPropertyChanged
     public int Age => new PersianCalendar().GetYear(DateTime.Today) - new PersianCalendar().GetYear(BirthDate);
 
     [NotMapped] public int EducationScore => GetEducationScore();
+    [NotMapped] public double EducationRelationStatusCoefficient => GetEducationRelationStatusCoefficient();
+    [NotMapped] public double EducationTotalScore => EducationScore * EducationRelationStatusCoefficient;
+    [NotMapped] public double ExperimentScore => GetExperimentScore();
 
     #endregion
 
@@ -37,7 +40,9 @@ public class Person : BaseModel, INotifyPropertyChanged
     private SalaryContext? _context;
     private DateTime _birthDate;
     private int _educationId;
-    
+    private int _educationRelationStatusId;
+    private double _consolidatedInsurance;
+    private int _professionalPathId;
     #endregion
 
     #region Public Members
@@ -68,7 +73,16 @@ public class Person : BaseModel, INotifyPropertyChanged
     [ForeignKey(nameof(EmploymentType))] public int EmploymentTypeId { get; set; }
     [ForeignKey(nameof(OrganizationUnit))] public int OrganizationUnitId { get; set; }
     public string OrganizationPost { get; set; } = "";
-    public double ConsolidatedInsurance { get; set; }
+
+    public double ConsolidatedInsurance
+    {
+        get => _consolidatedInsurance;
+        set
+        {
+            _consolidatedInsurance = value;
+            OnPropertyChanged();
+        }
+    }
 
     [ForeignKey(nameof(Education))]
     public int EducationId
@@ -96,9 +110,26 @@ public class Person : BaseModel, INotifyPropertyChanged
     [ForeignKey(nameof(Occupation))] public int OccupationId { get; set; }
 
     [ForeignKey(nameof(EducationRelationStatus))]
-    public int EducationRelationStatusId { get; set; }
+    public int EducationRelationStatusId
+    {
+        get => _educationRelationStatusId;
+        set
+        {
+            _educationRelationStatusId = value;
+            OnPropertyChanged();
+        }
+    }
 
-    [ForeignKey(nameof(ProfessionalPath))] public int ProfessionalPathId { get; set; }
+    [ForeignKey(nameof(ProfessionalPath))]
+    public int ProfessionalPathId
+    {
+        get => _professionalPathId;
+        set
+        {
+            _professionalPathId = value;
+            OnPropertyChanged();
+        }
+    }
 
     #endregion
 
@@ -125,5 +156,25 @@ public class Person : BaseModel, INotifyPropertyChanged
         if (_context == null)
             return Education.Score;
         return _context.Educations.FirstOrDefault(e => e.Id == _educationId)?.Score ?? Education.Score;
+    }
+
+    private double GetEducationRelationStatusCoefficient()
+    {
+        if (_context == null)
+            return EducationRelationStatus.Coefficient;
+        return _context.EducationRelationStatuses.FirstOrDefault(e => e.Id == _educationRelationStatusId)
+            ?.Coefficient ?? EducationRelationStatus.Coefficient;
+        ;
+    }
+
+    private double GetExperimentScore()
+    {
+        if (_context == null)
+            return 0;
+
+        return _context.ExperienceScores
+            .Where(e => e.ProfessionalPathId == _professionalPathId && e.WorkExperience <= _consolidatedInsurance)
+            .OrderByDescending(e => e.WorkExperience)
+            .FirstOrDefault()?.Score ?? 0;
     }
 }

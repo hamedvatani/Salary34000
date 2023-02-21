@@ -65,6 +65,10 @@
             this.txtPersonelCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtExperimentScore = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.cmbProfessionalPath = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.dtpEmploymentEndDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.txtSuperCollectable = new System.Windows.Forms.TextBox();
@@ -80,6 +84,12 @@
             this.dtpEmploymentDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtEducationTotalScore = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtEducationRelationStatusCoefficient = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cmbEducationRelationStatus = new System.Windows.Forms.ComboBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.txtEducationScore = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.cmbEducation = new System.Windows.Forms.ComboBox();
@@ -91,12 +101,8 @@
             this.txtEducationField = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.cmbProfessionalPath = new System.Windows.Forms.ComboBox();
-            this.cmbEducationRelationStatus = new System.Windows.Forms.ComboBox();
             this.cmbOccupation = new System.Windows.Forms.ComboBox();
             this.cmbJobGroup = new System.Windows.Forms.ComboBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.txtJobScore = new System.Windows.Forms.TextBox();
@@ -239,7 +245,6 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(144, 100);
             this.txtAge.Name = "txtAge";
-            this.txtAge.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(123, 22);
             this.txtAge.TabIndex = 30;
             // 
@@ -256,7 +261,6 @@
             // 
             this.txtBirthYear.Location = new System.Drawing.Point(144, 72);
             this.txtBirthYear.Name = "txtBirthYear";
-            this.txtBirthYear.ReadOnly = true;
             this.txtBirthYear.Size = new System.Drawing.Size(123, 22);
             this.txtBirthYear.TabIndex = 28;
             // 
@@ -475,6 +479,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtExperimentScore);
+            this.tabPage2.Controls.Add(this.label34);
+            this.tabPage2.Controls.Add(this.cmbProfessionalPath);
+            this.tabPage2.Controls.Add(this.label42);
             this.tabPage2.Controls.Add(this.dtpEmploymentEndDate);
             this.tabPage2.Controls.Add(this.label28);
             this.tabPage2.Controls.Add(this.txtSuperCollectable);
@@ -496,6 +504,40 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "مشخصات شغلی";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtExperimentScore
+            // 
+            this.txtExperimentScore.Location = new System.Drawing.Point(105, 20);
+            this.txtExperimentScore.Name = "txtExperimentScore";
+            this.txtExperimentScore.Size = new System.Drawing.Size(123, 22);
+            this.txtExperimentScore.TabIndex = 76;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(234, 23);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(70, 14);
+            this.label34.TabIndex = 75;
+            this.label34.Text = "امتیاز تجربه :";
+            // 
+            // cmbProfessionalPath
+            // 
+            this.cmbProfessionalPath.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProfessionalPath.FormattingEnabled = true;
+            this.cmbProfessionalPath.Location = new System.Drawing.Point(410, 213);
+            this.cmbProfessionalPath.Name = "cmbProfessionalPath";
+            this.cmbProfessionalPath.Size = new System.Drawing.Size(123, 22);
+            this.cmbProfessionalPath.TabIndex = 74;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(542, 219);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(89, 14);
+            this.label42.TabIndex = 73;
+            this.label42.Text = "مسیر حرفه ای :";
             // 
             // dtpEmploymentEndDate
             // 
@@ -625,6 +667,12 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txtEducationTotalScore);
+            this.tabPage3.Controls.Add(this.label31);
+            this.tabPage3.Controls.Add(this.txtEducationRelationStatusCoefficient);
+            this.tabPage3.Controls.Add(this.label30);
+            this.tabPage3.Controls.Add(this.cmbEducationRelationStatus);
+            this.tabPage3.Controls.Add(this.label43);
             this.tabPage3.Controls.Add(this.txtEducationScore);
             this.tabPage3.Controls.Add(this.label29);
             this.tabPage3.Controls.Add(this.cmbEducation);
@@ -643,9 +691,59 @@
             this.tabPage3.Text = "مشخصات تحصیلی";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // txtEducationTotalScore
+            // 
+            this.txtEducationTotalScore.Location = new System.Drawing.Point(421, 211);
+            this.txtEducationTotalScore.Name = "txtEducationTotalScore";
+            this.txtEducationTotalScore.Size = new System.Drawing.Size(123, 22);
+            this.txtEducationTotalScore.TabIndex = 80;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(553, 217);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 14);
+            this.label31.TabIndex = 79;
+            this.label31.Text = "امتیاز تحصیلات :";
+            // 
+            // txtEducationRelationStatusCoefficient
+            // 
+            this.txtEducationRelationStatusCoefficient.Location = new System.Drawing.Point(421, 183);
+            this.txtEducationRelationStatusCoefficient.Name = "txtEducationRelationStatusCoefficient";
+            this.txtEducationRelationStatusCoefficient.Size = new System.Drawing.Size(123, 22);
+            this.txtEducationRelationStatusCoefficient.TabIndex = 78;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(553, 189);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(120, 14);
+            this.label30.TabIndex = 77;
+            this.label30.Text = "ضریب ارتباط تحصیلات :";
+            // 
+            // cmbEducationRelationStatus
+            // 
+            this.cmbEducationRelationStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEducationRelationStatus.FormattingEnabled = true;
+            this.cmbEducationRelationStatus.Location = new System.Drawing.Point(421, 155);
+            this.cmbEducationRelationStatus.Name = "cmbEducationRelationStatus";
+            this.cmbEducationRelationStatus.Size = new System.Drawing.Size(123, 22);
+            this.cmbEducationRelationStatus.TabIndex = 76;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(553, 161);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(88, 14);
+            this.label43.TabIndex = 75;
+            this.label43.Text = "ارتباط تحصیلات :";
+            // 
             // txtEducationScore
             // 
-            this.txtEducationScore.Location = new System.Drawing.Point(439, 129);
+            this.txtEducationScore.Location = new System.Drawing.Point(421, 127);
             this.txtEducationScore.Name = "txtEducationScore";
             this.txtEducationScore.Size = new System.Drawing.Size(123, 22);
             this.txtEducationScore.TabIndex = 34;
@@ -653,7 +751,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(571, 135);
+            this.label29.Location = new System.Drawing.Point(553, 133);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(109, 14);
             this.label29.TabIndex = 33;
@@ -663,7 +761,7 @@
             // 
             this.cmbEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEducation.FormattingEnabled = true;
-            this.cmbEducation.Location = new System.Drawing.Point(439, 17);
+            this.cmbEducation.Location = new System.Drawing.Point(421, 15);
             this.cmbEducation.Name = "cmbEducation";
             this.cmbEducation.Size = new System.Drawing.Size(123, 22);
             this.cmbEducation.TabIndex = 32;
@@ -671,7 +769,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(571, 23);
+            this.label24.Location = new System.Drawing.Point(553, 21);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(58, 14);
             this.label24.TabIndex = 30;
@@ -679,7 +777,7 @@
             // 
             // txtEducationAverage
             // 
-            this.txtEducationAverage.Location = new System.Drawing.Point(439, 101);
+            this.txtEducationAverage.Location = new System.Drawing.Point(421, 99);
             this.txtEducationAverage.Name = "txtEducationAverage";
             this.txtEducationAverage.Size = new System.Drawing.Size(123, 22);
             this.txtEducationAverage.TabIndex = 29;
@@ -687,7 +785,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(571, 107);
+            this.label25.Location = new System.Drawing.Point(553, 105);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(42, 14);
             this.label25.TabIndex = 28;
@@ -695,7 +793,7 @@
             // 
             // txtEducationPlace
             // 
-            this.txtEducationPlace.Location = new System.Drawing.Point(439, 73);
+            this.txtEducationPlace.Location = new System.Drawing.Point(421, 71);
             this.txtEducationPlace.Name = "txtEducationPlace";
             this.txtEducationPlace.Size = new System.Drawing.Size(123, 22);
             this.txtEducationPlace.TabIndex = 27;
@@ -703,7 +801,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(571, 79);
+            this.label26.Location = new System.Drawing.Point(553, 77);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(75, 14);
             this.label26.TabIndex = 26;
@@ -711,7 +809,7 @@
             // 
             // txtEducationField
             // 
-            this.txtEducationField.Location = new System.Drawing.Point(439, 45);
+            this.txtEducationField.Location = new System.Drawing.Point(421, 43);
             this.txtEducationField.Name = "txtEducationField";
             this.txtEducationField.Size = new System.Drawing.Size(123, 22);
             this.txtEducationField.TabIndex = 25;
@@ -719,7 +817,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(571, 51);
+            this.label27.Location = new System.Drawing.Point(553, 49);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(86, 14);
             this.label27.TabIndex = 24;
@@ -727,12 +825,8 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.cmbProfessionalPath);
-            this.tabPage4.Controls.Add(this.cmbEducationRelationStatus);
             this.tabPage4.Controls.Add(this.cmbOccupation);
             this.tabPage4.Controls.Add(this.cmbJobGroup);
-            this.tabPage4.Controls.Add(this.label42);
-            this.tabPage4.Controls.Add(this.label43);
             this.tabPage4.Controls.Add(this.label44);
             this.tabPage4.Controls.Add(this.label39);
             this.tabPage4.Controls.Add(this.txtJobScore);
@@ -748,24 +842,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "مشخصات مالی";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // cmbProfessionalPath
-            // 
-            this.cmbProfessionalPath.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProfessionalPath.FormattingEnabled = true;
-            this.cmbProfessionalPath.Location = new System.Drawing.Point(413, 185);
-            this.cmbProfessionalPath.Name = "cmbProfessionalPath";
-            this.cmbProfessionalPath.Size = new System.Drawing.Size(123, 22);
-            this.cmbProfessionalPath.TabIndex = 72;
-            // 
-            // cmbEducationRelationStatus
-            // 
-            this.cmbEducationRelationStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEducationRelationStatus.FormattingEnabled = true;
-            this.cmbEducationRelationStatus.Location = new System.Drawing.Point(413, 157);
-            this.cmbEducationRelationStatus.Name = "cmbEducationRelationStatus";
-            this.cmbEducationRelationStatus.Size = new System.Drawing.Size(123, 22);
-            this.cmbEducationRelationStatus.TabIndex = 71;
             // 
             // cmbOccupation
             // 
@@ -784,24 +860,6 @@
             this.cmbJobGroup.Name = "cmbJobGroup";
             this.cmbJobGroup.Size = new System.Drawing.Size(123, 22);
             this.cmbJobGroup.TabIndex = 69;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(545, 191);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(89, 14);
-            this.label42.TabIndex = 65;
-            this.label42.Text = "مسیر حرفه ای :";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(545, 163);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(88, 14);
-            this.label43.TabIndex = 63;
-            this.label43.Text = "ارتباط تحصیلات :";
             // 
             // label44
             // 
@@ -963,12 +1021,8 @@
         private TextBox txtEducationField;
         private Label label27;
         private TabPage tabPage4;
-        private ComboBox cmbProfessionalPath;
-        private ComboBox cmbEducationRelationStatus;
         private ComboBox cmbOccupation;
         private ComboBox cmbJobGroup;
-        private Label label42;
-        private Label label43;
         private Label label44;
         private Label label39;
         private TextBox txtJobScore;
@@ -977,5 +1031,15 @@
         private Label label38;
         private TextBox txtOldBaseSummery;
         private Label label37;
+        private TextBox txtEducationRelationStatusCoefficient;
+        private Label label30;
+        private ComboBox cmbEducationRelationStatus;
+        private Label label43;
+        private TextBox txtEducationTotalScore;
+        private Label label31;
+        private TextBox txtExperimentScore;
+        private Label label34;
+        private ComboBox cmbProfessionalPath;
+        private Label label42;
     }
 }

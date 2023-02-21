@@ -11,6 +11,7 @@ using Salary34000.Data;
 using Salary34000.Models;
 using Salary34000.Utils;
 using Telerik.WinControls.UI;
+using Telerik.Windows.Diagrams.Core;
 
 namespace Salary34000.Forms
 {
@@ -45,50 +46,43 @@ namespace Salary34000.Forms
 
         private void BindControls()
         {
-            BindTextbox(txtPersonelCode);
-            BindTextbox(txtFirstName);
-            BindTextbox(txtLastName);
-            BindTextbox(txtNationalCode);
-            BindTextbox(txtDocumentNumber);
-            BindTextbox(txtDocumentSerial);
-            BindCombobox(cmbGender);
-            BindTextbox(txtChildrenCount);
-            BindDateTimePicker(dtpDocumentDate);
-            BindTextbox(txtDocumentCity);
-            BindDateTimePicker(dtpBirthDate);
-            BindTextbox(txtBirthCity);
-            BindTextbox(txtBirthYear);
-            BindTextbox(txtAge);
-            BindDateTimePicker(dtpEmploymentDate);
-            BindCombobox(cmbEmploymentType, "Id");
-            BindCombobox(cmbOrganizationUnit, "Id");
-            BindTextbox(txtOrganizationPost);
-            BindTextbox(txtConsolidatedInsurance);
-            BindCombobox(cmbEducation, "Id");
-            BindTextbox(txtEducationField);
-            BindTextbox(txtEducationPlace);
-            BindTextbox(txtEducationAverage);
-            BindCombobox(cmbMilitaryService, "Id");
-            BindCombobox(cmbMaritalStatus);
-            BindDateTimePicker(dtpMarriageDate);
-            BindTextbox(txtSuperCollectable);
-            BindDateTimePicker(dtpEmploymentEndDate);
-            BindTextbox(txtOldBaseSummery);
-            BindTextbox(txtOldHokmSummery);
-            BindTextbox(txtJobScore);
-            BindCombobox(cmbJobGroup, "Id");
-            BindCombobox(cmbOccupation, "Id");
-            BindCombobox(cmbEducationRelationStatus, "Id");
-            BindCombobox(cmbProfessionalPath, "Id");
-            BindTextbox(txtEducationScore);
+            if (_person == null)
+                return;
+
+            var controls = this.GetAllControls();
+            controls.Where(c => c is TextBox &&
+                                c.Name.StartsWith("txt") &&
+                                typeof(Person).GetProperty(c.Name[3..]) != null)
+                .Cast<TextBox>()
+                .ForEach(BindTextBox);
+            controls.Where(c => c is RadDateTimePicker &&
+                                c.Name.StartsWith("dtp") &&
+                                typeof(Person).GetProperty(c.Name[3..]) != null)
+                .Cast<RadDateTimePicker>()
+                .ForEach(BindDateTimePicker);
+            controls.Where(c => c is ComboBox &&
+                                c.Name.StartsWith("cmb") &&
+                                typeof(Person).GetProperty(c.Name[3..]) != null &&
+                                typeof(Person).GetProperty(c.Name[3..])!.PropertyType.IsEnum)
+                .Cast<ComboBox>()
+                .ForEach(c => BindComboBox(c));
+            controls.Where(c => c is ComboBox &&
+                                c.Name.StartsWith("cmb") &&
+                                typeof(Person).GetProperty(c.Name[3..]) != null &&
+                                !typeof(Person).GetProperty(c.Name[3..])!.PropertyType.IsEnum)
+                .Cast<ComboBox>()
+                .ForEach(c => BindComboBox(c, "Id"));
+            controls.Where(c => typeof(Person).GetProperty(c.Name[3..]) != null &&
+                                !typeof(Person).GetProperty(c.Name[3..])!.CanWrite)
+                .ForEach(c => c.Enabled = false);
         }
 
-        private void BindTextbox(TextBox textBox)
+        private void BindTextBox(TextBox textBox)
         {
             textBox.DataBindings.Add("Text", _bsPerson, textBox.Name.Substring(3));
         }
 
-        private void BindCombobox(ComboBox comboBox, string postFix = "")
+        private void BindComboBox(ComboBox comboBox, string postFix = "")
         {
             comboBox.DataBindings.Add("SelectedValue", _bsPerson, comboBox.Name.Substring(3) + postFix);
         }

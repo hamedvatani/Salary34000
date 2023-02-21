@@ -41,7 +41,7 @@ public static class FormUtilities
         }
     }
 
-    private static List<Control> GetAllControls(this Form form)
+    public static List<Control> GetAllControls(this Form form)
     {
         List<Control> retVal = new List<Control>();
         foreach (Control control in form.Controls)
