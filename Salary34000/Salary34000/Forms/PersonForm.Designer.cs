@@ -30,6 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txtMobile = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.dtpMarriageDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbMaritalStatus = new System.Windows.Forms.ComboBox();
@@ -65,6 +69,10 @@
             this.txtPersonelCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtInsuranceNumber = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.txtBaseInsurance = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
             this.txtPersonalGroupName = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.txtPersonalGroupScore = new System.Windows.Forms.TextBox();
@@ -113,6 +121,28 @@
             this.txtEducationField = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtManagementExtraPercent = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.txtPersonalWage3 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.txtManualPersonalIncreasePercent = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtPersonalWage2 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtPersonalWage1 = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.txtJobWage2 = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txtManualJobIncreasePercent = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtJobWage1 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.txtAccountNumber = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtBankName = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.cmbRoleExtra = new System.Windows.Forms.ComboBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.cmbOccupation = new System.Windows.Forms.ComboBox();
             this.cmbJobGroup = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
@@ -123,22 +153,12 @@
             this.label38 = new System.Windows.Forms.Label();
             this.txtOldBaseSummery = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.cmbRoleExtra = new System.Windows.Forms.ComboBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.txtBaseInsurance = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.txtInsuranceNumber = new System.Windows.Forms.TextBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.txtAccountNumber = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.txtBankName = new System.Windows.Forms.TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.txtMobile = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.txtJobWage1 = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
+            this.txtManualManagementExtraPercent = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.txtTotalManagementExtraPercent = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.txtManagementExtra = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpMarriageDate)).BeginInit();
@@ -165,7 +185,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(847, 399);
+            this.tabControl1.Size = new System.Drawing.Size(1019, 470);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -211,10 +231,46 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(736, 372);
+            this.tabPage1.Size = new System.Drawing.Size(1011, 443);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "مشخصات عمومی";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAddress.Location = new System.Drawing.Point(474, 299);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(123, 22);
+            this.txtAddress.TabIndex = 40;
+            // 
+            // label51
+            // 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(606, 305);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(43, 14);
+            this.label51.TabIndex = 39;
+            this.label51.Text = "آدرس :";
+            // 
+            // txtMobile
+            // 
+            this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMobile.Location = new System.Drawing.Point(474, 271);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(123, 22);
+            this.txtMobile.TabIndex = 38;
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(606, 277);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(45, 14);
+            this.label52.TabIndex = 37;
+            this.label52.Text = "موبایل :";
             // 
             // dtpMarriageDate
             // 
@@ -582,10 +638,46 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(736, 372);
+            this.tabPage2.Size = new System.Drawing.Size(1011, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "مشخصات شغلی";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtInsuranceNumber
+            // 
+            this.txtInsuranceNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInsuranceNumber.Location = new System.Drawing.Point(152, 241);
+            this.txtInsuranceNumber.Name = "txtInsuranceNumber";
+            this.txtInsuranceNumber.Size = new System.Drawing.Size(123, 22);
+            this.txtInsuranceNumber.TabIndex = 92;
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(281, 244);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(73, 14);
+            this.label48.TabIndex = 91;
+            this.label48.Text = "شماره بیمه :";
+            // 
+            // txtBaseInsurance
+            // 
+            this.txtBaseInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBaseInsurance.Location = new System.Drawing.Point(152, 213);
+            this.txtBaseInsurance.Name = "txtBaseInsurance";
+            this.txtBaseInsurance.Size = new System.Drawing.Size(123, 22);
+            this.txtBaseInsurance.TabIndex = 90;
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(281, 216);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(57, 14);
+            this.label47.TabIndex = 89;
+            this.label47.Text = "بیمه پایه :";
             // 
             // txtPersonalGroupName
             // 
@@ -896,7 +988,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(689, 338);
+            this.tabPage3.Size = new System.Drawing.Size(1011, 443);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "مشخصات تحصیلی";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1051,6 +1143,26 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.txtManagementExtra);
+            this.tabPage4.Controls.Add(this.label63);
+            this.tabPage4.Controls.Add(this.txtTotalManagementExtraPercent);
+            this.tabPage4.Controls.Add(this.label62);
+            this.tabPage4.Controls.Add(this.txtManualManagementExtraPercent);
+            this.tabPage4.Controls.Add(this.label61);
+            this.tabPage4.Controls.Add(this.txtManagementExtraPercent);
+            this.tabPage4.Controls.Add(this.label60);
+            this.tabPage4.Controls.Add(this.txtPersonalWage3);
+            this.tabPage4.Controls.Add(this.label59);
+            this.tabPage4.Controls.Add(this.txtManualPersonalIncreasePercent);
+            this.tabPage4.Controls.Add(this.label58);
+            this.tabPage4.Controls.Add(this.txtPersonalWage2);
+            this.tabPage4.Controls.Add(this.label57);
+            this.tabPage4.Controls.Add(this.txtPersonalWage1);
+            this.tabPage4.Controls.Add(this.label56);
+            this.tabPage4.Controls.Add(this.txtJobWage2);
+            this.tabPage4.Controls.Add(this.label55);
+            this.tabPage4.Controls.Add(this.txtManualJobIncreasePercent);
+            this.tabPage4.Controls.Add(this.label54);
             this.tabPage4.Controls.Add(this.txtJobWage1);
             this.tabPage4.Controls.Add(this.label53);
             this.tabPage4.Controls.Add(this.txtAccountNumber);
@@ -1072,17 +1184,217 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(839, 372);
+            this.tabPage4.Size = new System.Drawing.Size(1011, 443);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "مشخصات مالی";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtManagementExtraPercent
+            // 
+            this.txtManagementExtraPercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtManagementExtraPercent.Location = new System.Drawing.Point(124, 15);
+            this.txtManagementExtraPercent.Name = "txtManagementExtraPercent";
+            this.txtManagementExtraPercent.Size = new System.Drawing.Size(123, 22);
+            this.txtManagementExtraPercent.TabIndex = 92;
+            // 
+            // label60
+            // 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(256, 21);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(138, 14);
+            this.label60.TabIndex = 91;
+            this.label60.Text = "ضریب فوق العاده مدیریت :";
+            // 
+            // txtPersonalWage3
+            // 
+            this.txtPersonalWage3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPersonalWage3.Location = new System.Drawing.Point(424, 183);
+            this.txtPersonalWage3.Name = "txtPersonalWage3";
+            this.txtPersonalWage3.Size = new System.Drawing.Size(123, 22);
+            this.txtPersonalWage3.TabIndex = 90;
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(556, 189);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(81, 14);
+            this.label59.TabIndex = 89;
+            this.label59.Text = "حق شاغل ۳ :";
+            // 
+            // txtManualPersonalIncreasePercent
+            // 
+            this.txtManualPersonalIncreasePercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtManualPersonalIncreasePercent.Location = new System.Drawing.Point(424, 155);
+            this.txtManualPersonalIncreasePercent.Name = "txtManualPersonalIncreasePercent";
+            this.txtManualPersonalIncreasePercent.Size = new System.Drawing.Size(123, 22);
+            this.txtManualPersonalIncreasePercent.TabIndex = 88;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(556, 161);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(163, 14);
+            this.label58.TabIndex = 87;
+            this.label58.Text = "درصد افزایش دستی شخصی :";
+            // 
+            // txtPersonalWage2
+            // 
+            this.txtPersonalWage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPersonalWage2.Location = new System.Drawing.Point(424, 127);
+            this.txtPersonalWage2.Name = "txtPersonalWage2";
+            this.txtPersonalWage2.Size = new System.Drawing.Size(123, 22);
+            this.txtPersonalWage2.TabIndex = 86;
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(556, 133);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(81, 14);
+            this.label57.TabIndex = 85;
+            this.label57.Text = "حق شاغل ۲ :";
+            // 
+            // txtPersonalWage1
+            // 
+            this.txtPersonalWage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPersonalWage1.Location = new System.Drawing.Point(424, 99);
+            this.txtPersonalWage1.Name = "txtPersonalWage1";
+            this.txtPersonalWage1.Size = new System.Drawing.Size(123, 22);
+            this.txtPersonalWage1.TabIndex = 84;
+            // 
+            // label56
+            // 
+            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(556, 105);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(81, 14);
+            this.label56.TabIndex = 83;
+            this.label56.Text = "حق شاغل ۱ :";
+            // 
+            // txtJobWage2
+            // 
+            this.txtJobWage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtJobWage2.Location = new System.Drawing.Point(424, 71);
+            this.txtJobWage2.Name = "txtJobWage2";
+            this.txtJobWage2.Size = new System.Drawing.Size(123, 22);
+            this.txtJobWage2.TabIndex = 82;
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(556, 77);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(76, 14);
+            this.label55.TabIndex = 81;
+            this.label55.Text = "حق شغل ۲ :";
+            // 
+            // txtManualJobIncreasePercent
+            // 
+            this.txtManualJobIncreasePercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtManualJobIncreasePercent.Location = new System.Drawing.Point(424, 43);
+            this.txtManualJobIncreasePercent.Name = "txtManualJobIncreasePercent";
+            this.txtManualJobIncreasePercent.Size = new System.Drawing.Size(123, 22);
+            this.txtManualJobIncreasePercent.TabIndex = 80;
+            // 
+            // label54
+            // 
+            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(556, 49);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(156, 14);
+            this.label54.TabIndex = 79;
+            this.label54.Text = "درصد افزایش دستی شغلی :";
+            // 
+            // txtJobWage1
+            // 
+            this.txtJobWage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtJobWage1.Location = new System.Drawing.Point(424, 15);
+            this.txtJobWage1.Name = "txtJobWage1";
+            this.txtJobWage1.Size = new System.Drawing.Size(123, 22);
+            this.txtJobWage1.TabIndex = 78;
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(556, 21);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(76, 14);
+            this.label53.TabIndex = 77;
+            this.label53.Text = "حق شغل ۱ :";
+            // 
+            // txtAccountNumber
+            // 
+            this.txtAccountNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAccountNumber.Location = new System.Drawing.Point(735, 213);
+            this.txtAccountNumber.Name = "txtAccountNumber";
+            this.txtAccountNumber.Size = new System.Drawing.Size(123, 22);
+            this.txtAccountNumber.TabIndex = 76;
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(867, 219);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(87, 14);
+            this.label49.TabIndex = 75;
+            this.label49.Text = "شماره حساب :";
+            // 
+            // txtBankName
+            // 
+            this.txtBankName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBankName.Location = new System.Drawing.Point(735, 185);
+            this.txtBankName.Name = "txtBankName";
+            this.txtBankName.Size = new System.Drawing.Size(123, 22);
+            this.txtBankName.TabIndex = 74;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(867, 191);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(55, 14);
+            this.label50.TabIndex = 73;
+            this.label50.Text = "نام بانک :";
+            // 
+            // cmbRoleExtra
+            // 
+            this.cmbRoleExtra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbRoleExtra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoleExtra.FormattingEnabled = true;
+            this.cmbRoleExtra.Location = new System.Drawing.Point(735, 157);
+            this.cmbRoleExtra.Name = "cmbRoleExtra";
+            this.cmbRoleExtra.Size = new System.Drawing.Size(123, 22);
+            this.cmbRoleExtra.TabIndex = 72;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(867, 163);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(96, 14);
+            this.label46.TabIndex = 71;
+            this.label46.Text = "فوق العاده نقش :";
             // 
             // cmbOccupation
             // 
             this.cmbOccupation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbOccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOccupation.FormattingEnabled = true;
-            this.cmbOccupation.Location = new System.Drawing.Point(563, 129);
+            this.cmbOccupation.Location = new System.Drawing.Point(735, 129);
             this.cmbOccupation.Name = "cmbOccupation";
             this.cmbOccupation.Size = new System.Drawing.Size(123, 22);
             this.cmbOccupation.TabIndex = 70;
@@ -1092,7 +1404,7 @@
             this.cmbJobGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbJobGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJobGroup.FormattingEnabled = true;
-            this.cmbJobGroup.Location = new System.Drawing.Point(563, 101);
+            this.cmbJobGroup.Location = new System.Drawing.Point(735, 101);
             this.cmbJobGroup.Name = "cmbJobGroup";
             this.cmbJobGroup.Size = new System.Drawing.Size(123, 22);
             this.cmbJobGroup.TabIndex = 69;
@@ -1101,7 +1413,7 @@
             // 
             this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(695, 135);
+            this.label44.Location = new System.Drawing.Point(867, 135);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(80, 14);
             this.label44.TabIndex = 61;
@@ -1111,7 +1423,7 @@
             // 
             this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(695, 107);
+            this.label39.Location = new System.Drawing.Point(867, 107);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(75, 14);
             this.label39.TabIndex = 59;
@@ -1120,7 +1432,7 @@
             // txtJobScore
             // 
             this.txtJobScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtJobScore.Location = new System.Drawing.Point(563, 73);
+            this.txtJobScore.Location = new System.Drawing.Point(735, 73);
             this.txtJobScore.Name = "txtJobScore";
             this.txtJobScore.Size = new System.Drawing.Size(123, 22);
             this.txtJobScore.TabIndex = 58;
@@ -1129,7 +1441,7 @@
             // 
             this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(695, 79);
+            this.label40.Location = new System.Drawing.Point(867, 79);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(71, 14);
             this.label40.TabIndex = 57;
@@ -1138,7 +1450,7 @@
             // txtOldHokmSummery
             // 
             this.txtOldHokmSummery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOldHokmSummery.Location = new System.Drawing.Point(563, 45);
+            this.txtOldHokmSummery.Location = new System.Drawing.Point(735, 45);
             this.txtOldHokmSummery.Name = "txtOldHokmSummery";
             this.txtOldHokmSummery.Size = new System.Drawing.Size(123, 22);
             this.txtOldHokmSummery.TabIndex = 56;
@@ -1147,7 +1459,7 @@
             // 
             this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(695, 51);
+            this.label38.Location = new System.Drawing.Point(867, 51);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(92, 14);
             this.label38.TabIndex = 55;
@@ -1156,7 +1468,7 @@
             // txtOldBaseSummery
             // 
             this.txtOldBaseSummery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOldBaseSummery.Location = new System.Drawing.Point(563, 17);
+            this.txtOldBaseSummery.Location = new System.Drawing.Point(735, 17);
             this.txtOldBaseSummery.Name = "txtOldBaseSummery";
             this.txtOldBaseSummery.Size = new System.Drawing.Size(123, 22);
             this.txtOldBaseSummery.TabIndex = 54;
@@ -1165,163 +1477,71 @@
             // 
             this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(695, 23);
+            this.label37.Location = new System.Drawing.Point(867, 23);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(98, 14);
             this.label37.TabIndex = 53;
             this.label37.Text = "جمع مبنای قبلی :";
             // 
-            // cmbRoleExtra
+            // txtManualManagementExtraPercent
             // 
-            this.cmbRoleExtra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbRoleExtra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRoleExtra.FormattingEnabled = true;
-            this.cmbRoleExtra.Location = new System.Drawing.Point(563, 157);
-            this.cmbRoleExtra.Name = "cmbRoleExtra";
-            this.cmbRoleExtra.Size = new System.Drawing.Size(123, 22);
-            this.cmbRoleExtra.TabIndex = 72;
+            this.txtManualManagementExtraPercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtManualManagementExtraPercent.Location = new System.Drawing.Point(124, 43);
+            this.txtManualManagementExtraPercent.Name = "txtManualManagementExtraPercent";
+            this.txtManualManagementExtraPercent.Size = new System.Drawing.Size(123, 22);
+            this.txtManualManagementExtraPercent.TabIndex = 94;
             // 
-            // label46
+            // label61
             // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(695, 163);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(96, 14);
-            this.label46.TabIndex = 71;
-            this.label46.Text = "فوق العاده نقش :";
+            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(256, 49);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(152, 14);
+            this.label61.TabIndex = 93;
+            this.label61.Text = "اصلاح دستی ض ف مدیریت :";
             // 
-            // txtBaseInsurance
+            // txtTotalManagementExtraPercent
             // 
-            this.txtBaseInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBaseInsurance.Location = new System.Drawing.Point(152, 213);
-            this.txtBaseInsurance.Name = "txtBaseInsurance";
-            this.txtBaseInsurance.Size = new System.Drawing.Size(123, 22);
-            this.txtBaseInsurance.TabIndex = 90;
+            this.txtTotalManagementExtraPercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalManagementExtraPercent.Location = new System.Drawing.Point(124, 71);
+            this.txtTotalManagementExtraPercent.Name = "txtTotalManagementExtraPercent";
+            this.txtTotalManagementExtraPercent.Size = new System.Drawing.Size(123, 22);
+            this.txtTotalManagementExtraPercent.TabIndex = 96;
             // 
-            // label47
+            // label62
             // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(281, 216);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(57, 14);
-            this.label47.TabIndex = 89;
-            this.label47.Text = "بیمه پایه :";
+            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(256, 77);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(138, 14);
+            this.label62.TabIndex = 95;
+            this.label62.Text = "ضریب فوق العاده مدیریت :";
             // 
-            // txtInsuranceNumber
+            // txtManagementExtra
             // 
-            this.txtInsuranceNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtInsuranceNumber.Location = new System.Drawing.Point(152, 241);
-            this.txtInsuranceNumber.Name = "txtInsuranceNumber";
-            this.txtInsuranceNumber.Size = new System.Drawing.Size(123, 22);
-            this.txtInsuranceNumber.TabIndex = 92;
+            this.txtManagementExtra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtManagementExtra.Location = new System.Drawing.Point(124, 99);
+            this.txtManagementExtra.Name = "txtManagementExtra";
+            this.txtManagementExtra.Size = new System.Drawing.Size(123, 22);
+            this.txtManagementExtra.TabIndex = 98;
             // 
-            // label48
+            // label63
             // 
-            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(281, 244);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(73, 14);
-            this.label48.TabIndex = 91;
-            this.label48.Text = "شماره بیمه :";
-            // 
-            // txtAccountNumber
-            // 
-            this.txtAccountNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAccountNumber.Location = new System.Drawing.Point(563, 213);
-            this.txtAccountNumber.Name = "txtAccountNumber";
-            this.txtAccountNumber.Size = new System.Drawing.Size(123, 22);
-            this.txtAccountNumber.TabIndex = 76;
-            // 
-            // label49
-            // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(695, 219);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(87, 14);
-            this.label49.TabIndex = 75;
-            this.label49.Text = "شماره حساب :";
-            // 
-            // txtBankName
-            // 
-            this.txtBankName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBankName.Location = new System.Drawing.Point(563, 185);
-            this.txtBankName.Name = "txtBankName";
-            this.txtBankName.Size = new System.Drawing.Size(123, 22);
-            this.txtBankName.TabIndex = 74;
-            // 
-            // label50
-            // 
-            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(695, 191);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(55, 14);
-            this.label50.TabIndex = 73;
-            this.label50.Text = "نام بانک :";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(474, 299);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(123, 22);
-            this.txtAddress.TabIndex = 40;
-            // 
-            // label51
-            // 
-            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(606, 305);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(43, 14);
-            this.label51.TabIndex = 39;
-            this.label51.Text = "آدرس :";
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMobile.Location = new System.Drawing.Point(474, 271);
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(123, 22);
-            this.txtMobile.TabIndex = 38;
-            // 
-            // label52
-            // 
-            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(606, 277);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(45, 14);
-            this.label52.TabIndex = 37;
-            this.label52.Text = "موبایل :";
-            // 
-            // txtJobWage1
-            // 
-            this.txtJobWage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtJobWage1.Location = new System.Drawing.Point(298, 15);
-            this.txtJobWage1.Name = "txtJobWage1";
-            this.txtJobWage1.Size = new System.Drawing.Size(123, 22);
-            this.txtJobWage1.TabIndex = 78;
-            // 
-            // label53
-            // 
-            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(430, 21);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(76, 14);
-            this.label53.TabIndex = 77;
-            this.label53.Text = "حق شغل ۱ :";
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(256, 105);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(106, 14);
+            this.label63.TabIndex = 97;
+            this.label63.Text = "فوق العاده مدیریت :";
             // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 445);
+            this.ClientSize = new System.Drawing.Size(1019, 516);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PersonForm";
@@ -1459,5 +1679,25 @@
         private Label label50;
         private TextBox txtJobWage1;
         private Label label53;
+        private TextBox txtManualJobIncreasePercent;
+        private Label label54;
+        private TextBox txtJobWage2;
+        private Label label55;
+        private TextBox txtPersonalWage1;
+        private Label label56;
+        private TextBox txtPersonalWage2;
+        private Label label57;
+        private TextBox txtManualPersonalIncreasePercent;
+        private Label label58;
+        private TextBox txtPersonalWage3;
+        private Label label59;
+        private TextBox txtManagementExtraPercent;
+        private Label label60;
+        private TextBox txtManualManagementExtraPercent;
+        private Label label61;
+        private TextBox txtTotalManagementExtraPercent;
+        private Label label62;
+        private TextBox txtManagementExtra;
+        private Label label63;
     }
 }

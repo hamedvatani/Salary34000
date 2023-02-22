@@ -43,6 +43,13 @@ public class Person : BaseModel, INotifyPropertyChanged
 
     [NotMapped] public string PersonalGroupName => GetPersonalGroupName();
     [NotMapped] public long JobWage1 => GetJobWage1();
+    [NotMapped] public long JobWage2 => GetJobWage2();
+    [NotMapped] public long PersonalWage1 => GetPersonalWage1();
+    [NotMapped] public long PersonalWage2 => (long)(PersonalWage1 * 1.15);
+    [NotMapped] public long PersonalWage3 => GetPersonalWage3();
+    [NotMapped] public double ManagementExtraPercent => GetManagementExtraPercent();
+    [NotMapped] public double TotalManagementExtraPercent => ManagementExtraPercent + _manualManagementExtraPercent;
+    [NotMapped] public long ManagementExtra => (long)(JobWage2 * (1 + TotalManagementExtraPercent / 100));
 
     #endregion
 
@@ -58,6 +65,10 @@ public class Person : BaseModel, INotifyPropertyChanged
     private int _specialActivities;
     private int _developmentPlan;
     private int _jobGroupId;
+    private int _occupationId;
+    private double _manualJobIncreasePercent;
+    private double _manualPersonalIncreasePercent;
+    private double _manualManagementExtraPercent;
 
     #endregion
 
@@ -134,7 +145,16 @@ public class Person : BaseModel, INotifyPropertyChanged
         }
     }
 
-    [ForeignKey(nameof(Occupation))] public int OccupationId { get; set; }
+    [ForeignKey(nameof(Occupation))]
+    public int OccupationId
+    {
+        get => _occupationId;
+        set
+        {
+            _occupationId = value;
+            OnPropertyChanged();
+        }
+    }
 
     [ForeignKey(nameof(EducationRelationStatus))]
     public int EducationRelationStatusId
@@ -196,6 +216,38 @@ public class Person : BaseModel, INotifyPropertyChanged
     public string AccountNumber { get; set; } = "";
     public string Mobile { get; set; } = "";
     public string Address { get; set; } = "";
+
+    public double ManualJobIncreasePercent
+    {
+        get => _manualJobIncreasePercent;
+        set
+        {
+            _manualJobIncreasePercent = value;
+            OnPropertyChanged();
+        }
+
+    }
+
+    public double ManualPersonalIncreasePercent
+    {
+        get => _manualPersonalIncreasePercent;
+        set
+        {
+            _manualPersonalIncreasePercent = value;
+            OnPropertyChanged();
+        }
+
+    }
+
+    public double ManualManagementExtraPercent
+    {
+        get => _manualManagementExtraPercent;
+        set
+        {
+            _manualManagementExtraPercent = value;
+            OnPropertyChanged();
+        }
+    }
 
     #endregion
 
@@ -275,5 +327,41 @@ public class Person : BaseModel, INotifyPropertyChanged
             .Sum() + 1;
         var baseSalary = _context.Parameters.FirstOrDefault(p => p.Key == "BaseSalary")?.Value ?? 0;
         return (long)(coefficient * baseSalary);
+    }
+
+    private long GetJobWage2()
+    {
+        if (_context == null)
+            return 0;
+
+        var coefficient = _context.Occupations.FirstOrDefault(o => o.Id == _occupationId)?.Coefficient ?? 0;
+        return (long)(JobWage1 * coefficient * (1 + _manualJobIncreasePercent / 100));
+    }
+
+    private long GetPersonalWage1()
+    {
+        if (_context == null)
+            return ProfessionalPath.Amount;
+
+        return _context.ProfessionalPaths.FirstOrDefault(p => p.Id == _professionalPathId)?.Amount ??
+               ProfessionalPath.Amount;
+    }
+
+    private long GetPersonalWage3()
+    {
+        if (_context == null)
+            return 0;
+
+        return (long)((_context.Years.FirstOrDefault(y => y.Years == (int)Math.Round(_consolidatedInsurance))
+                           ?.Coefficient ??
+                       0) * PersonalWage2 * (1 + _manualPersonalIncreasePercent / 100));
+    }
+
+    private double GetManagementExtraPercent()
+    {
+        if (_context == null)
+            return 0;
+
+        return _context.JobGroups.FirstOrDefault(j => j.Id == _jobGroupId)?.ManagementExtra ?? 0 * 100;
     }
 }

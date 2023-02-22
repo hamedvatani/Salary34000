@@ -62,7 +62,9 @@ namespace Salary34000
                     BankName = "ملی",
                     AccountNumber = "0100293068008",
                     Mobile = "09123118043",
-                    Address = " تهران،  پونک، سردار جنگل، خ بهار شرقی، خ فجر، ک فجر 2، پلاک 21، واحد 1"
+                    Address = " تهران،  پونک، سردار جنگل، خ بهار شرقی، خ فجر، ک فجر 2، پلاک 21، واحد 1",
+                    ManualJobIncreasePercent = 7.1428571,
+                    ManualManagementExtraPercent = -5.5
                 };
                 _context.Persons.Add(p);
                 _context.SaveChanges();

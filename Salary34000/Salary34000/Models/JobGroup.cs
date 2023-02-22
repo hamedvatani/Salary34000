@@ -60,7 +60,37 @@ public class JobGroup : IdDescriptionModel, IHasInitialData
         1.07
     };
 
+    private static readonly double[] ManagementExtras =
+    {
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.105,
+        0.224,
+        0.364,
+        0.525,
+        0.7
+    };
+
     public double ProportionIncrease { get; set; }
+    public double ManagementExtra { get; set; }
 
     public Array GetInitialData()
     {
@@ -76,7 +106,8 @@ public class JobGroup : IdDescriptionModel, IHasInitialData
             {
                 Id = i + 1,
                 Description = Descriptions[i],
-                ProportionIncrease = ProportionIncreases[i]
+                ProportionIncrease = ProportionIncreases[i],
+                ManagementExtra = ManagementExtras[i]
             };
         }
 

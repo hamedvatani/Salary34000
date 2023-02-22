@@ -18,6 +18,7 @@ public class SalaryContext : DbContext
     public DbSet<Performance> Performances { get; set; } = null!;
     public DbSet<PersonalGroup> PersonalGroups { get; set; } = null!;
     public DbSet<Parameter> Parameters { get; set; } = null!;
+    public DbSet<Year> Years { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
